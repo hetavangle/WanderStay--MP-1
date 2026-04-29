@@ -2,7 +2,7 @@ const sampleListings = [
   {
     title: "Cozy Beachfront Cottage",
     description: "Escape to this charming beachfront cottage for a relaxing getaway. Enjoy stunning ocean views and easy access to the beach.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
     price: 1500,
     location: "Malibu",
     country: "United States",
@@ -10,7 +10,7 @@ const sampleListings = [
   {
     title: "Mountain Retreat Cabin",
     description: "A cozy log cabin nestled in the mountains. Perfect for hiking, skiing, and enjoying crisp mountain air.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=60",
     price: 2200,
     location: "Aspen",
     country: "United States",
@@ -18,7 +18,7 @@ const sampleListings = [
   {
     title: "Parisian Studio Apartment",
     description: "Live like a local in this chic studio apartment in the heart of Paris, steps from cafes and iconic landmarks.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=60",
     price: 3200,
     location: "Paris",
     country: "France",
@@ -26,7 +26,7 @@ const sampleListings = [
   {
     title: "Tropical Villa with Pool",
     description: "Luxurious villa surrounded by lush tropical gardens with a private infinity pool and stunning sea views.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=60",
     price: 5500,
     location: "Bali",
     country: "Indonesia",
@@ -34,7 +34,7 @@ const sampleListings = [
   {
     title: "Historic City Centre Flat",
     description: "Beautifully restored flat in a 19th century building, combining original character with modern comforts.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=60",
     price: 1800,
     location: "Edinburgh",
     country: "United Kingdom",
@@ -42,7 +42,7 @@ const sampleListings = [
   {
     title: "Desert Adobe Casita",
     description: "Experience the magic of the Sonoran Desert in this authentic adobe casita with breathtaking sunset views.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?auto=format&fit=crop&w=800&q=60",
     price: 1200,
     location: "Sedona",
     country: "United States",
@@ -50,7 +50,7 @@ const sampleListings = [
   {
     title: "Lakeside Wooden Chalet",
     description: "Peaceful chalet on the shores of a crystal-clear alpine lake. Kayaks and canoes included.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=60",
     price: 2800,
     location: "Interlaken",
     country: "Switzerland",
@@ -58,7 +58,7 @@ const sampleListings = [
   {
     title: "Santorini Cave House",
     description: "Iconic whitewashed cave house carved into the cliffs of Oia with a private terrace and caldera views.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=60",
     price: 4200,
     location: "Santorini",
     country: "Greece",
@@ -66,7 +66,7 @@ const sampleListings = [
   {
     title: "Tokyo Micro Apartment",
     description: "Ultra-modern micro apartment in Shibuya, perfectly designed for efficiency and style in the heart of Tokyo.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=60",
     price: 1100,
     location: "Tokyo",
     country: "Japan",
@@ -74,7 +74,7 @@ const sampleListings = [
   {
     title: "Tuscan Farmhouse",
     description: "Rustic farmhouse in the rolling Tuscan hills, surrounded by vineyards and olive groves. Wine tasting included.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=800&q=60",
     price: 3800,
     location: "Florence",
     country: "Italy",
@@ -82,7 +82,7 @@ const sampleListings = [
   {
     title: "New York City Penthouse",
     description: "Spectacular penthouse with 360-degree views of the Manhattan skyline, luxury furnishings throughout.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800&q=60",
     price: 9500,
     location: "New York City",
     country: "United States",
@@ -90,7 +90,7 @@ const sampleListings = [
   {
     title: "Scottish Highland Cottage",
     description: "Remote stone cottage in the misty Scottish Highlands, ideal for those seeking solitude and dramatic scenery.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=60",
     price: 1600,
     location: "Inverness",
     country: "United Kingdom",
@@ -98,7 +98,7 @@ const sampleListings = [
   {
     title: "Overwater Bungalow",
     description: "Iconic overwater bungalow above a crystal-clear turquoise lagoon. Direct ladder access to the reef below.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=60",
     price: 7200,
     location: "Bora Bora",
     country: "French Polynesia",
@@ -106,7 +106,7 @@ const sampleListings = [
   {
     title: "Cape Town Ocean View Home",
     description: "Stylish home perched above Cape Town with sweeping ocean and Table Mountain views. Pool and BBQ area.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=800&q=60",
     price: 3400,
     location: "Cape Town",
     country: "South Africa",
@@ -114,7 +114,7 @@ const sampleListings = [
   {
     title: "Canadian Lakefront Cottage",
     description: "Classic red cottage on the shores of Muskoka Lake. Canoes, firepit, and a private dock await.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=60",
     price: 2100,
     location: "Muskoka",
     country: "Canada",
@@ -122,7 +122,7 @@ const sampleListings = [
   {
     title: "Moroccan Riad",
     description: "Traditional riad in the Marrakech medina with a stunning tiled courtyard, rooftop terrace, and hammam.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=60",
     price: 2600,
     location: "Marrakech",
     country: "Morocco",
@@ -130,7 +130,7 @@ const sampleListings = [
   {
     title: "Sydney Harbour Apartment",
     description: "Sleek apartment with direct views of the Sydney Opera House and Harbour Bridge. Steps from the waterfront.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1523428096881-5bd79d043006?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1523428096881-5bd79d043006?auto=format&fit=crop&w=800&q=60",
     price: 4100,
     location: "Sydney",
     country: "Australia",
@@ -138,7 +138,7 @@ const sampleListings = [
   {
     title: "Bavarian Castle Suite",
     description: "Stay in a genuine Bavarian castle suite with antique furnishings, medieval architecture, and forest views.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=60",
     price: 6800,
     location: "Bavaria",
     country: "Germany",
@@ -146,7 +146,7 @@ const sampleListings = [
   {
     title: "Kyoto Machiya Townhouse",
     description: "Restored traditional machiya townhouse in Gion. Tatami rooms, Japanese garden, and tea ceremony space.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=60",
     price: 2900,
     location: "Kyoto",
     country: "Japan",
@@ -154,7 +154,7 @@ const sampleListings = [
   {
     title: "Costa Rican Jungle Treehouse",
     description: "Elevated treehouse deep in the rainforest canopy. Wake up to howler monkeys and tropical birdsong.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=60",
     price: 1900,
     location: "Manuel Antonio",
     country: "Costa Rica",
@@ -162,7 +162,7 @@ const sampleListings = [
   {
     title: "Amsterdam Canal Houseboat",
     description: "Unique floating home on an iconic Amsterdam canal. Bikes included for exploring the city.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=800&q=60",
     price: 2400,
     location: "Amsterdam",
     country: "Netherlands",
@@ -170,7 +170,7 @@ const sampleListings = [
   {
     title: "Iceland Northern Lights Cabin",
     description: "Glass-ceiling cabin designed for watching the northern lights from your bed. Geothermal hot tub on deck.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=60",
     price: 5800,
     location: "Reykjavik",
     country: "Iceland",
@@ -178,7 +178,7 @@ const sampleListings = [
   {
     title: "Miami Art Deco Suite",
     description: "Stylish suite in a restored Art Deco building on Ocean Drive, steps from South Beach.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?auto=format&fit=crop&w=800&q=60",
     price: 2700,
     location: "Miami Beach",
     country: "United States",
@@ -186,7 +186,7 @@ const sampleListings = [
   {
     title: "Amalfi Coast Cliffside Villa",
     description: "Dramatic cliffside villa with panoramic views of the Amalfi Coast. Private terrace and plunge pool.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=800&q=60",
     price: 6200,
     location: "Positano",
     country: "Italy",
@@ -194,7 +194,7 @@ const sampleListings = [
   {
     title: "New Zealand Farmstay",
     description: "Authentic working farm stay with rolling green hills and sheep as far as the eye can see.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=800&q=60",
     price: 1400,
     location: "Queenstown",
     country: "New Zealand",
@@ -202,7 +202,7 @@ const sampleListings = [
   {
     title: "Barcelona Gothic Quarter Loft",
     description: "Spacious loft in a converted medieval building in Barcelona's Gothic Quarter. High ceilings and exposed stone.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=60",
     price: 2300,
     location: "Barcelona",
     country: "Spain",
@@ -210,7 +210,7 @@ const sampleListings = [
   {
     title: "Safari Lodge Tent",
     description: "Luxury tented lodge on the Masai Mara with game drives, sundowners, and stargazing from your private deck.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=800&q=60",
     price: 8500,
     location: "Masai Mara",
     country: "Kenya",
@@ -218,7 +218,7 @@ const sampleListings = [
   {
     title: "Prague Old Town Apartment",
     description: "Charming apartment overlooking the cobblestone streets of Prague's Old Town. Walk to the Astronomical Clock.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=800&q=60",
     price: 1700,
     location: "Prague",
     country: "Czech Republic",
@@ -226,7 +226,7 @@ const sampleListings = [
   {
     title: "Maldives Beach Villa",
     description: "Private beach villa on a secluded Maldivian island with direct ocean access and butler service.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=60",
     price: 11000,
     location: "North Male Atoll",
     country: "Maldives",
@@ -234,7 +234,7 @@ const sampleListings = [
   {
     title: "Vancouver Island Rainforest Cabin",
     description: "Off-grid cabin surrounded by ancient temperate rainforest. Waterfall hike right from the doorstep.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=60",
     price: 1950,
     location: "Tofino",
     country: "Canada",
@@ -242,7 +242,7 @@ const sampleListings = [
   {
     title: "Rio Oceanfront Penthouse",
     description: "Stunning penthouse overlooking Ipanema Beach with panoramic views of the ocean and Sugarloaf Mountain.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=800&q=60",
     price: 4800,
     location: "Rio de Janeiro",
     country: "Brazil",
@@ -250,7 +250,7 @@ const sampleListings = [
   {
     title: "Dubrovnik Old City Studio",
     description: "Quaint studio apartment inside Dubrovnik's ancient city walls with a rooftop terrace overlooking the Adriatic.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1555990538-c4f506b116d7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1555990538-c4f506b116d7?auto=format&fit=crop&w=800&q=60",
     price: 2100,
     location: "Dubrovnik",
     country: "Croatia",
@@ -258,7 +258,7 @@ const sampleListings = [
   {
     title: "Himalayan Retreat",
     description: "Peaceful retreat in the foothills of the Himalayas with yoga deck, organic garden, and mountain vistas.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1502126324834-38f8e02d7160?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1502126324834-38f8e02d7160?auto=format&fit=crop&w=800&q=60",
     price: 900,
     location: "Rishikesh",
     country: "India",
@@ -266,7 +266,7 @@ const sampleListings = [
   {
     title: "Lake Como Waterfront Villa",
     description: "Elegant villa directly on Lake Como with a private dock, boathouse, and manicured Italian gardens.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=60",
     price: 7800,
     location: "Lake Como",
     country: "Italy",
@@ -274,7 +274,7 @@ const sampleListings = [
   {
     title: "Buenos Aires Tango Loft",
     description: "Stylish loft in the vibrant San Telmo neighbourhood, home to antique fairs and tango milongas.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=800&q=60",
     price: 1300,
     location: "Buenos Aires",
     country: "Argentina",
@@ -282,7 +282,7 @@ const sampleListings = [
   {
     title: "Lisbon Hilltop Townhouse",
     description: "Sun-filled townhouse in historic Alfama with sweeping views of the Tagus River and traditional azulejo tiles.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=800&q=60",
     price: 1850,
     location: "Lisbon",
     country: "Portugal",
@@ -290,7 +290,7 @@ const sampleListings = [
   {
     title: "Hawaii Lava Rock Cottage",
     description: "Unique cottage built on ancient lava fields on the Big Island, near Hawaii Volcanoes National Park.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?auto=format&fit=crop&w=800&q=60",
     price: 2600,
     location: "Big Island",
     country: "United States",
@@ -298,7 +298,7 @@ const sampleListings = [
   {
     title: "Vienna Heritage Apartment",
     description: "Grand apartment in a Habsburg-era building near the Vienna State Opera, with ornate ceilings and parquet floors.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=800&q=60",
     price: 2500,
     location: "Vienna",
     country: "Austria",
@@ -306,7 +306,7 @@ const sampleListings = [
   {
     title: "Sahara Desert Camp",
     description: "Authentic Berber luxury camp in the Sahara. Camel treks at sunrise and stargazing around the campfire.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=60",
     price: 3100,
     location: "Merzouga",
     country: "Morocco",
@@ -314,7 +314,7 @@ const sampleListings = [
   {
     title: "Singapore Skyline Suite",
     description: "Ultra-modern suite in Marina Bay with floor-to-ceiling windows and a front-row view of the city skyline.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=60",
     price: 4500,
     location: "Marina Bay",
     country: "Singapore",
@@ -322,7 +322,7 @@ const sampleListings = [
   {
     title: "Alaskan Wilderness Lodge",
     description: "Remote lodge accessible only by floatplane, surrounded by glaciers, grizzly bears, and salmon rivers.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=60",
     price: 6500,
     location: "Denali",
     country: "United States",
@@ -330,7 +330,7 @@ const sampleListings = [
   {
     title: "Zurich Old Town Apartment",
     description: "Elegant apartment in Zurich's medieval old town. Walk to world-class restaurants, galleries, and Lake Zurich.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&w=800&q=60",
     price: 3600,
     location: "Zurich",
     country: "Switzerland",
@@ -338,7 +338,7 @@ const sampleListings = [
   {
     title: "Phuket Clifftop Pool Villa",
     description: "Dramatic clifftop villa above the Andaman Sea with infinity pool, outdoor dining, and private chef option.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?auto=format&fit=crop&w=800&q=60",
     price: 4900,
     location: "Phuket",
     country: "Thailand",
@@ -346,7 +346,7 @@ const sampleListings = [
   {
     title: "Montreal Plateau Duplex",
     description: "Charming duplex in Le Plateau with a spiral staircase, exposed brick, and a sunny back garden.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1567684014761-b65e2e59b9eb?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1567684014761-b65e2e59b9eb?auto=format&fit=crop&w=800&q=60",
     price: 1600,
     location: "Montreal",
     country: "Canada",
@@ -354,7 +354,7 @@ const sampleListings = [
   {
     title: "Petra Desert Lodge",
     description: "Lodge carved into rose-red sandstone cliffs overlooking the ancient city of Petra.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=800&q=60",
     price: 3300,
     location: "Wadi Musa",
     country: "Jordan",
@@ -362,7 +362,7 @@ const sampleListings = [
   {
     title: "Copenhagen Harbour Flat",
     description: "Bright Scandinavian flat on the Nyhavn canal with colourful facades visible from your living room window.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=800&q=60",
     price: 2900,
     location: "Copenhagen",
     country: "Denmark",
@@ -370,7 +370,7 @@ const sampleListings = [
   {
     title: "Blue Ridge Mountain Cabin",
     description: "Romantic log cabin on a wooded ridge with a hot tub, stone fireplace, and stunning fall foliage views.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=60",
     price: 1750,
     location: "Asheville",
     country: "United States",
@@ -378,7 +378,7 @@ const sampleListings = [
   {
     title: "Ubud Rice Terrace Villa",
     description: "Serene villa overlooking lush rice terraces in Ubud's cultural heart. Daily yoga and meditation classes.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=60",
     price: 2200,
     location: "Ubud",
     country: "Indonesia",
@@ -386,7 +386,7 @@ const sampleListings = [
   {
     title: "Galway Bay Fisherman's Cottage",
     description: "Traditional Irish whitewashed cottage overlooking Galway Bay, with a peat fireplace and stone floors.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=60",
     price: 1400,
     location: "Galway",
     country: "Ireland",
@@ -394,7 +394,7 @@ const sampleListings = [
   {
     title: "Patagonian Estancia",
     description: "Sprawling estancia at the end of the world with horseback riding, trekking, and glacier day trips.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=60",
     price: 4400,
     location: "El Calafate",
     country: "Argentina",
@@ -402,7 +402,7 @@ const sampleListings = [
   {
     title: "Rome Trastevere Apartment",
     description: "Sunny apartment in Trastevere's cobblestone lanes, Rome's most romantic and bohemian neighbourhood.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=60",
     price: 2000,
     location: "Rome",
     country: "Italy",
@@ -410,7 +410,7 @@ const sampleListings = [
   {
     title: "Seoul Hanok Guesthouse",
     description: "Traditional Korean hanok guesthouse in Bukchon village with heated ondol floors and wooden courtyards.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=800&q=60",
     price: 1550,
     location: "Seoul",
     country: "South Korea",
@@ -418,7 +418,7 @@ const sampleListings = [
   {
     title: "Napa Valley Wine Country Cottage",
     description: "Romantic cottage on a working vineyard in Napa Valley. Wine tasting, cellar tours, and harvest dinners.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=800&q=60",
     price: 3200,
     location: "Napa",
     country: "United States",
@@ -426,7 +426,7 @@ const sampleListings = [
   {
     title: "Melbourne Fitzroy Warehouse Loft",
     description: "Industrial-chic loft in a converted Victorian warehouse in Melbourne's artsy Fitzroy neighbourhood.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=60",
     price: 1900,
     location: "Melbourne",
     country: "Australia",
@@ -434,7 +434,7 @@ const sampleListings = [
   {
     title: "Havana Colonial Mansion",
     description: "Stunning colonial mansion in Old Havana with original tilework, grand verandas, and a rooftop cocktail bar.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=800&q=60",
     price: 1200,
     location: "Havana",
     country: "Cuba",
@@ -442,7 +442,7 @@ const sampleListings = [
   {
     title: "Norwegian Fjord Cabin",
     description: "Isolated cabin perched above a dramatic Norwegian fjord. Fishing, kayaking, and midnight sun in summer.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=60",
     price: 3500,
     location: "Flam",
     country: "Norway",
@@ -450,7 +450,7 @@ const sampleListings = [
   {
     title: "Dubai Marina Apartment",
     description: "Sleek high-rise apartment in Dubai Marina with panoramic views of the yacht-lined waterway and skyline.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=60",
     price: 5200,
     location: "Dubai",
     country: "United Arab Emirates",
@@ -458,7 +458,7 @@ const sampleListings = [
   {
     title: "Lake Bled Island Cottage",
     description: "Fairytale cottage near the shores of Lake Bled with views of the island church and Julian Alps.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?auto=format&fit=crop&w=800&q=60",
     price: 2300,
     location: "Bled",
     country: "Slovenia",
@@ -466,7 +466,7 @@ const sampleListings = [
   {
     title: "San Francisco Victorian Home",
     description: "Beautifully restored Painted Lady Victorian in the heart of San Francisco with bay windows and original details.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=60",
     price: 4600,
     location: "San Francisco",
     country: "United States",
@@ -474,7 +474,7 @@ const sampleListings = [
   {
     title: "Thailand Beachfront Bungalow",
     description: "Simple but beautiful bungalow steps from a white sand beach in Koh Lanta, away from the crowds.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=800&q=60",
     price: 1100,
     location: "Koh Lanta",
     country: "Thailand",
@@ -482,7 +482,7 @@ const sampleListings = [
   {
     title: "Lake District Stone Cottage",
     description: "Quintessential English stone cottage in the Lake District with a walled garden and views of Windermere.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=60",
     price: 1650,
     location: "Windermere",
     country: "United Kingdom",
@@ -490,7 +490,7 @@ const sampleListings = [
   {
     title: "Tel Aviv White City Apartment",
     description: "Bright Bauhaus apartment in Tel Aviv's UNESCO-listed White City, blocks from the beach and Carmel market.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=60",
     price: 2100,
     location: "Tel Aviv",
     country: "Israel",
@@ -498,7 +498,7 @@ const sampleListings = [
   {
     title: "Yosemite Valley Glamping Tent",
     description: "Upscale canvas tent in the pines near Yosemite Valley with luxury bedding, fire pit, and stargazing.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=60",
     price: 2800,
     location: "Yosemite",
     country: "United States",
@@ -506,7 +506,7 @@ const sampleListings = [
   {
     title: "Bangkok Riverside Suites",
     description: "Elegant suite on the Chao Phraya river with private longtail boat access and temple views.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=800&q=60",
     price: 2200,
     location: "Bangkok",
     country: "Thailand",
@@ -514,7 +514,7 @@ const sampleListings = [
   {
     title: "Cornwall Coastal Hideaway",
     description: "Secluded cottage above a secret Cornish cove, accessed by a private cliff path to a golden beach.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=60",
     price: 1900,
     location: "St Ives",
     country: "United Kingdom",
@@ -522,7 +522,7 @@ const sampleListings = [
   {
     title: "Oaxacan Casa Colonial",
     description: "Colonial casa in the heart of Oaxaca with a shaded courtyard, traditional textiles, and rooftop views.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=60",
     price: 1400,
     location: "Oaxaca",
     country: "Mexico",
@@ -530,7 +530,7 @@ const sampleListings = [
   {
     title: "Stockholm Archipelago Cottage",
     description: "Idyllic red-painted cottage on a tiny Stockholm archipelago island, reachable only by boat.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=800&q=60",
     price: 2700,
     location: "Stockholm",
     country: "Sweden",
@@ -538,7 +538,7 @@ const sampleListings = [
   {
     title: "Yangon Heritage Mansion",
     description: "Lovingly restored British colonial mansion in downtown Yangon with teak floors and wrap-around verandas.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=60",
     price: 1800,
     location: "Yangon",
     country: "Myanmar",
@@ -546,7 +546,7 @@ const sampleListings = [
   {
     title: "Cotswolds Manor House",
     description: "Honey-stone manor house in the Cotswolds with formal gardens, a croquet lawn, and a residents' pub.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=800&q=60",
     price: 4200,
     location: "Bourton-on-the-Water",
     country: "United Kingdom",
@@ -554,7 +554,7 @@ const sampleListings = [
   {
     title: "Cartagena Colonial Apartment",
     description: "Colourful apartment in walled colonial Cartagena, with a bougainvillea-draped balcony and courtyard pool.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=800&q=60",
     price: 1500,
     location: "Cartagena",
     country: "Colombia",
@@ -562,7 +562,7 @@ const sampleListings = [
   {
     title: "Dalmatian Island Retreat",
     description: "Stone villa on a car-free Dalmatian island with lavender fields, olive trees, and a private harbour.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1555990538-c4f506b116d7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1555990538-c4f506b116d7?auto=format&fit=crop&w=800&q=60",
     price: 3100,
     location: "Hvar",
     country: "Croatia",
@@ -570,7 +570,7 @@ const sampleListings = [
   {
     title: "Chiang Mai Zen Temple House",
     description: "Traditional Thai teak house within a working temple complex surrounded by jasmine-scented gardens.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=800&q=60",
     price: 950,
     location: "Chiang Mai",
     country: "Thailand",
@@ -578,7 +578,7 @@ const sampleListings = [
   {
     title: "Reykjavik Geothermal Cottage",
     description: "Cosy lava-stone cottage with a geothermal hot tub in the garden, close to Reykjavik's colourful downtown.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=60",
     price: 3400,
     location: "Reykjavik",
     country: "Iceland",
@@ -586,7 +586,7 @@ const sampleListings = [
   {
     title: "Swiss Alps Ski Chalet",
     description: "Slope-side chalet in Verbier with a sauna, ski storage, and direct piste access for winter adventures.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=60",
     price: 7500,
     location: "Verbier",
     country: "Switzerland",
@@ -594,7 +594,7 @@ const sampleListings = [
   {
     title: "Fiji Island Bure",
     description: "Traditional Fijian bure (thatched bungalow) on a private island with snorkelling reef steps away.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=60",
     price: 5600,
     location: "Yasawa Islands",
     country: "Fiji",
@@ -602,7 +602,7 @@ const sampleListings = [
   {
     title: "Athens Acropolis View Apartment",
     description: "Modern apartment with a rooftop terrace offering unobstructed views of the Acropolis, lit up at night.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=800&q=60",
     price: 2100,
     location: "Athens",
     country: "Greece",
@@ -610,7 +610,7 @@ const sampleListings = [
   {
     title: "Namibia Desert Lodge",
     description: "Eco-lodge in the heart of the Namib Desert with guided star walks, sand dune hikes, and oryx spotting.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=60",
     price: 4700,
     location: "Sossusvlei",
     country: "Namibia",
@@ -618,7 +618,7 @@ const sampleListings = [
   {
     title: "Penang Heritage Shophouse",
     description: "Restored Peranakan shophouse in George Town's UNESCO heritage zone, full of intricate tiles and antiques.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=60",
     price: 1300,
     location: "Penang",
     country: "Malaysia",
@@ -626,7 +626,7 @@ const sampleListings = [
   {
     title: "Arusha Coffee Estate Cottage",
     description: "Cottage on a working coffee estate at the foot of Mount Kilimanjaro with guided farm walks.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=800&q=60",
     price: 2600,
     location: "Arusha",
     country: "Tanzania",
@@ -634,7 +634,7 @@ const sampleListings = [
   {
     title: "Beirut Design District Apartment",
     description: "Creative apartment in Beirut's Mar Mikhael design district, surrounded by galleries and artisan ateliers.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=800&q=60",
     price: 1600,
     location: "Beirut",
     country: "Lebanon",
@@ -642,7 +642,7 @@ const sampleListings = [
   {
     title: "Porto Wine Lodge",
     description: "Stay inside a historic Port wine lodge in Vila Nova de Gaia with barrel-lined cellars and Douro views.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=800&q=60",
     price: 2200,
     location: "Porto",
     country: "Portugal",
@@ -650,7 +650,7 @@ const sampleListings = [
   {
     title: "Colorado Rocky Mountain Retreat",
     description: "Luxurious mountain retreat with hot tub, fireplace, and direct access to Rocky Mountain National Park trails.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=60",
     price: 3300,
     location: "Estes Park",
     country: "United States",
@@ -658,7 +658,7 @@ const sampleListings = [
   {
     title: "Hanoi Old Quarter Townhouse",
     description: "Atmospheric townhouse in Hanoi's 1000-year-old Old Quarter, above a family-run pho restaurant.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=60",
     price: 800,
     location: "Hanoi",
     country: "Vietnam",
@@ -666,7 +666,7 @@ const sampleListings = [
   {
     title: "Mykonos Cycladic Villa",
     description: "Iconic whitewashed Cycladic villa above Mykonos Town with windmill views and a private plunge pool.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=60",
     price: 5100,
     location: "Mykonos",
     country: "Greece",
@@ -674,7 +674,7 @@ const sampleListings = [
   {
     title: "Tbilisi Sulphur Bath House",
     description: "Restored historic bath house in Abanotubani with private sulphur bath pools and a rooftop wine bar.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=800&q=60",
     price: 1700,
     location: "Tbilisi",
     country: "Georgia",
@@ -682,7 +682,7 @@ const sampleListings = [
   {
     title: "Oregon Coast Lighthouse Keeper's Cottage",
     description: "Iconic cottage beside a working lighthouse on the Oregon coast. Whale watching from the cliffs.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800&q=60",
     price: 2400,
     location: "Newport",
     country: "United States",
@@ -690,7 +690,7 @@ const sampleListings = [
   {
     title: "Seville Patio House",
     description: "Traditional Sevillian house centred around an ornate tiled patio with orange trees and a fountain.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=60",
     price: 1800,
     location: "Seville",
     country: "Spain",
@@ -698,7 +698,7 @@ const sampleListings = [
   {
     title: "Lake Titicaca Floating Reed Island",
     description: "Unique stay on a traditional Uros floating reed island with Quechua hosts and totora boat excursions.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1502126324834-38f8e02d7160?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1502126324834-38f8e02d7160?auto=format&fit=crop&w=800&q=60",
     price: 700,
     location: "Puno",
     country: "Peru",
@@ -706,7 +706,7 @@ const sampleListings = [
   {
     title: "Bruges Canal View Apartment",
     description: "Romantic apartment overlooking a medieval canal in Bruges, Belgium's perfectly preserved fairy-tale city.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=800&q=60",
     price: 2000,
     location: "Bruges",
     country: "Belgium",
@@ -714,7 +714,7 @@ const sampleListings = [
   {
     title: "Jackson Hole Ski Retreat",
     description: "Spacious mountain home in Teton Village with ski-in/ski-out access and a massive stone fireplace.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=60",
     price: 6100,
     location: "Jackson Hole",
     country: "United States",
@@ -722,7 +722,7 @@ const sampleListings = [
   {
     title: "Havana Rooftop Apartment",
     description: "Bright top-floor apartment in Central Havana with a breezy terrace overlooking the vibrant streetscape.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=60",
     price: 1100,
     location: "Havana",
     country: "Cuba",
@@ -730,7 +730,7 @@ const sampleListings = [
   {
     title: "Douro Valley Quinta",
     description: "Elegant quinta estate in the steeply terraced Douro Valley, producing award-winning Port wine.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=800&q=60",
     price: 3700,
     location: "Peso da Regua",
     country: "Portugal",
@@ -738,7 +738,7 @@ const sampleListings = [
   {
     title: "Zanzibar Spice Island Villa",
     description: "Swahili-style villa on Zanzibar's north coast, surrounded by spice gardens and pristine coral reefs.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=60",
     price: 3900,
     location: "Nungwi",
     country: "Tanzania",
@@ -746,7 +746,7 @@ const sampleListings = [
   {
     title: "Quebec City Chateau Suite",
     description: "Grand suite inside a historic chateau in Old Quebec, with views of the St Lawrence River and city walls.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&w=800&q=60",
     price: 3100,
     location: "Quebec City",
     country: "Canada",
@@ -754,7 +754,7 @@ const sampleListings = [
   {
     title: "Oman Wadis Desert Retreat",
     description: "Tented camp amid Oman's dramatic wadi landscapes with swimming holes, frankincense trees, and silence.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=60",
     price: 2800,
     location: "Nizwa",
     country: "Oman",
@@ -762,7 +762,7 @@ const sampleListings = [
   {
     title: "Taipei Hakka Village House",
     description: "Restored traditional Hakka house in the hills outside Taipei surrounded by tea plantations.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=800&q=60",
     price: 1200,
     location: "Taipei",
     country: "Taiwan",
@@ -770,7 +770,7 @@ const sampleListings = [
   {
     title: "Andes Mountain Lodge",
     description: "Rustic lodge in the high Andes with llamas grazing outside, hot springs, and Milky Way stargazing.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1502126324834-38f8e02d7160?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1502126324834-38f8e02d7160?auto=format&fit=crop&w=800&q=60",
     price: 2000,
     location: "Cusco",
     country: "Peru",
@@ -778,7 +778,7 @@ const sampleListings = [
   {
     title: "Cappadocia Cave Suite",
     description: "Magical cave suite carved into a volcanic tuff fairy chimney, with a private terrace for hot air balloon views.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1566438480900-0609be27a4be?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1566438480900-0609be27a4be?auto=format&fit=crop&w=800&q=60",
     price: 3600,
     location: "Goreme",
     country: "Turkey",
@@ -786,7 +786,7 @@ const sampleListings = [
   {
     title: "Austin Music District Bungalow",
     description: "Hip bungalow in East Austin with a screened porch, hammock garden, and walking distance to live music venues.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=60",
     price: 1800,
     location: "Austin",
     country: "United States",
@@ -794,7 +794,7 @@ const sampleListings = [
   {
     title: "Venice Grand Canal Palazzo",
     description: "Historic Venetian palazzo on the Grand Canal with original frescoes, marble floors, and gondola docking.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=60",
     price: 8900,
     location: "Venice",
     country: "Italy",
@@ -802,7 +802,7 @@ const sampleListings = [
   {
     title: "Caribbean Beachfront Plantation House",
     description: "18th century plantation house on a hillside above a private beach in Barbados. Plunge pool and rum bar.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60",
     price: 6400,
     location: "St. James",
     country: "Barbados",
@@ -810,7 +810,7 @@ const sampleListings = [
   {
     title: "Hokkaido Snow Country Farmhouse",
     description: "Classic Japanese minka farmhouse in Hokkaido's snowy countryside. Onsen baths and farm-to-table dining.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=800&q=60",
     price: 2500,
     location: "Furano",
     country: "Japan",
@@ -818,7 +818,7 @@ const sampleListings = [
   {
     title: "Vilnius Old Town Apartment",
     description: "Renovated apartment in a Gothic-Baroque building in Vilnius's UNESCO-listed old town.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=800&q=60",
     price: 1200,
     location: "Vilnius",
     country: "Lithuania",
@@ -826,7 +826,7 @@ const sampleListings = [
   {
     title: "Mozambique Island Beach Bungalow",
     description: "Rustic bungalow on Mozambique Island surrounded by Indian Ocean dhow sailing and untouched coral reefs.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60",
     price: 1600,
     location: "Ilha de Mocambique",
     country: "Mozambique",
@@ -834,7 +834,7 @@ const sampleListings = [
   {
     title: "Lombok Jungle Eco-Villa",
     description: "Sustainable bamboo villa in Lombok's jungle with rice field views, an outdoor shower, and organic meals.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=60",
     price: 1400,
     location: "Senggigi",
     country: "Indonesia",
@@ -842,7 +842,7 @@ const sampleListings = [
   {
     title: "Detroit Midcentury Bungalow",
     description: "Impeccably restored 1950s bungalow in Detroit's Sherwood Forest neighbourhood, full of original charm.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=60",
     price: 1100,
     location: "Detroit",
     country: "United States",
@@ -850,7 +850,7 @@ const sampleListings = [
   {
     title: "Aarhus Harbourfront Flat",
     description: "Contemporary flat in Denmark's second city with a south-facing terrace over the revitalised harbour.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?auto=format&fit=crop&w=800&q=60",
     price: 2100,
     location: "Aarhus",
     country: "Denmark",
@@ -858,7 +858,7 @@ const sampleListings = [
   {
     title: "Machu Picchu Cloud Forest Lodge",
     description: "Lodge in the cloud forest below Machu Picchu with Inca Trail access and orchid-filled gardens.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=60",
     price: 2900,
     location: "Aguas Calientes",
     country: "Peru",
@@ -866,7 +866,7 @@ const sampleListings = [
   {
     title: "Corsican Maquis Villa",
     description: "Sun-drenched villa surrounded by Corsican maquis scrubland with a pool, outdoor kitchen, and sea views.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=60",
     price: 3400,
     location: "Bonifacio",
     country: "France",
@@ -874,7 +874,7 @@ const sampleListings = [
   {
     title: "Jaipur Heritage Haveli",
     description: "Magnificent painted haveli in Jaipur's Pink City with ornate jharokha balconies and a rooftop pool.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=60",
     price: 2700,
     location: "Jaipur",
     country: "India",
@@ -882,7 +882,7 @@ const sampleListings = [
   {
     title: "Key West Conch House",
     description: "Classic Key West conch house with a wraparound porch, lush tropical garden, and a pool.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60",
     price: 3000,
     location: "Key West",
     country: "United States",
@@ -890,7 +890,7 @@ const sampleListings = [
   {
     title: "Siem Reap Temple Retreat",
     description: "Peaceful villa surrounded by lotus ponds, minutes from Angkor Wat's temple complex.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=60",
     price: 1100,
     location: "Siem Reap",
     country: "Cambodia",
@@ -898,7 +898,7 @@ const sampleListings = [
   {
     title: "Porto Santo Beach Cottage",
     description: "Whitewashed cottage on Porto Santo's nine-kilometre golden beach in the Madeira archipelago.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=60",
     price: 1700,
     location: "Porto Santo",
     country: "Portugal",
@@ -906,7 +906,7 @@ const sampleListings = [
   {
     title: "Big Sur Oceanfront Cabin",
     description: "Dramatic cliff-edge cabin above the Pacific at Big Sur, with a wood-burning stove and redwood deck.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=60",
     price: 4300,
     location: "Big Sur",
     country: "United States",
@@ -914,7 +914,7 @@ const sampleListings = [
   {
     title: "Valletta Baroque Townhouse",
     description: "Dramatic townhouse inside a Baroque 16th century building in Malta's fortified capital city.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=800&q=60",
     price: 2200,
     location: "Valletta",
     country: "Malta",
@@ -922,7 +922,7 @@ const sampleListings = [
   {
     title: "Mongolian Ger Camp",
     description: "Authentic Mongolian ger (yurt) camp on the open steppe with horse trekking and nomadic family hosting.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=60",
     price: 850,
     location: "Ulaanbaatar",
     country: "Mongolia",
@@ -930,7 +930,7 @@ const sampleListings = [
   {
     title: "Algarve Cliffside Villa",
     description: "Dramatic villa above Algarve's iconic golden limestone cliffs with sea-stack views and a lap pool.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=800&q=60",
     price: 4100,
     location: "Lagos",
     country: "Portugal",
@@ -938,7 +938,7 @@ const sampleListings = [
   {
     title: "Goa Portuguese Heritage Villa",
     description: "Lovingly restored 18th century Portuguese villa in Fontainhas with Indo-Portuguese tilework.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=60",
     price: 2100,
     location: "Panaji",
     country: "India",
@@ -946,7 +946,7 @@ const sampleListings = [
   {
     title: "Minnesota Lake House",
     description: "Classic Minnesota lake house on a pristine northern lake with a dock, canoes, and loon calls at night.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=60",
     price: 1900,
     location: "Brainerd Lakes",
     country: "United States",
@@ -954,7 +954,7 @@ const sampleListings = [
   {
     title: "Isfahan Caravanserai",
     description: "Boutique stay inside a restored Safavid caravanserai on Naqsh-e Jahan Square in ancient Isfahan.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=800&q=60",
     price: 1600,
     location: "Isfahan",
     country: "Iran",
@@ -962,7 +962,7 @@ const sampleListings = [
   {
     title: "Crete Seafront Windmill",
     description: "Converted Venetian-era windmill on the Cretan seafront, with panoramic views of the Aegean.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=60",
     price: 2900,
     location: "Heraklion",
     country: "Greece",
@@ -970,7 +970,7 @@ const sampleListings = [
   {
     title: "Queenstown Adventure Lodge",
     description: "Modern lodge in Queenstown close to bungee jumping, skydiving, jet boating, and the Remarkables ski area.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=800&q=60",
     price: 2600,
     location: "Queenstown",
     country: "New Zealand",
@@ -978,7 +978,7 @@ const sampleListings = [
   {
     title: "Andalusian Cortijo",
     description: "Traditional white cortijo farmhouse in Andalusia, surrounded by olive groves and flamenco culture.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=60",
     price: 2400,
     location: "Ronda",
     country: "Spain",
@@ -986,7 +986,7 @@ const sampleListings = [
   {
     title: "Madagascar Rainforest Eco-Lodge",
     description: "Remote eco-lodge in the heart of a Malagasy rainforest. Nightly lemur walks and endemic bird spotting.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=800&q=60",
     price: 1900,
     location: "Ranomafana",
     country: "Madagascar",
@@ -994,7 +994,7 @@ const sampleListings = [
   {
     title: "Dolomites Alpine Chalet",
     description: "Charming chalet below the soaring Dolomite peaks with hiking trails, mountain huts, and via ferrata routes.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=60",
     price: 4000,
     location: "Cortina d'Ampezzo",
     country: "Italy",
@@ -1002,7 +1002,7 @@ const sampleListings = [
   {
     title: "Guadalajara Hacienda",
     description: "Colonial hacienda in the highlands of Jalisco with tequila tours, charreada rodeos, and mariachi nights.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=60",
     price: 2100,
     location: "Guadalajara",
     country: "Mexico",
@@ -1010,7 +1010,7 @@ const sampleListings = [
   {
     title: "Western Sahara Nomad Tent",
     description: "Nights under a billion stars in a Tuareg nomad tent deep in the Western Sahara.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=60",
     price: 700,
     location: "Laayoune",
     country: "Morocco",
@@ -1018,7 +1018,7 @@ const sampleListings = [
   {
     title: "Okinawa Beach House",
     description: "Ryukyuan-style beach house on Okinawa's turquoise coast with snorkelling, sea glass hunting, and fresh soba.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=800&q=60",
     price: 1800,
     location: "Naha",
     country: "Japan",
@@ -1026,7 +1026,7 @@ const sampleListings = [
   {
     title: "Nile Felucca Houseboat",
     description: "Traditional Egyptian felucca converted into a floating guesthouse on the Nile near Aswan's temples.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=60",
     price: 1000,
     location: "Aswan",
     country: "Egypt",
@@ -1034,7 +1034,7 @@ const sampleListings = [
   {
     title: "Martha's Vineyard Shingle Cottage",
     description: "Classic New England shingle cottage a short bike ride from the Gay Head Cliffs and Edgartown harbour.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800&q=60",
     price: 4800,
     location: "Martha's Vineyard",
     country: "United States",
@@ -1042,7 +1042,7 @@ const sampleListings = [
   {
     title: "Nairobi Safari House",
     description: "Bush house on the edge of Nairobi National Park where giraffes and zebras roam outside your window.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=800&q=60",
     price: 3600,
     location: "Nairobi",
     country: "Kenya",
@@ -1050,7 +1050,7 @@ const sampleListings = [
   {
     title: "Cinque Terre Village House",
     description: "Pastel-coloured village house in Vernazza, Cinque Terre, with sea views and fresh pesto workshops.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=800&q=60",
     price: 3200,
     location: "Vernazza",
     country: "Italy",
@@ -1058,7 +1058,7 @@ const sampleListings = [
   {
     title: "Bhutan Mountain Farmhouse",
     description: "Authentic Bhutanese farmhouse in Paro Valley with hot stone baths and guided hikes to Tiger's Nest Monastery.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1502126324834-38f8e02d7160?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1502126324834-38f8e02d7160?auto=format&fit=crop&w=800&q=60",
     price: 3900,
     location: "Paro",
     country: "Bhutan",
@@ -1066,7 +1066,7 @@ const sampleListings = [
   {
     title: "Helsinki Design District Flat",
     description: "Minimalist Scandinavian flat in Helsinki's Design District, surrounded by Finnish design studios and saunas.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=60",
     price: 2200,
     location: "Helsinki",
     country: "Finland",
@@ -1074,7 +1074,7 @@ const sampleListings = [
   {
     title: "Ha Long Bay Junk Boat",
     description: "Overnight on a classic wooden junk cruising the limestone karsts of Ha Long Bay with kayaking and caving.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=60",
     price: 1500,
     location: "Ha Long Bay",
     country: "Vietnam",
@@ -1082,7 +1082,7 @@ const sampleListings = [
   {
     title: "Rio Sul Pantanal Fazenda",
     description: "Ecofazenda in Brazil's Pantanal wetlands with caiman, jaguar, and capybara wildlife encounters.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=800&q=60",
     price: 4200,
     location: "Bonito",
     country: "Brazil",
@@ -1090,7 +1090,7 @@ const sampleListings = [
   {
     title: "Bordeaux Chateau Guest Suite",
     description: "Stay inside a working Bordeaux Grand Cru chateau with cellar tours, barrel tastings, and harvest participation.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=800&q=60",
     price: 5300,
     location: "Saint-Emilion",
     country: "France",
@@ -1098,7 +1098,7 @@ const sampleListings = [
   {
     title: "Lake Malawi Beach Lodge",
     description: "Eco-lodge on the shores of Lake Malawi, the freshwater lake of stars, with kayaking and snorkelling.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=60",
     price: 1400,
     location: "Cape Maclear",
     country: "Malawi",
@@ -1106,7 +1106,7 @@ const sampleListings = [
   {
     title: "Petra Cave Dwelling",
     description: "Unique night stay inside a cave carved by the Nabataeans, overlooking the royal tombs of ancient Petra.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1548786811-dd6e453ccca7?auto=format&fit=crop&w=800&q=60",
     price: 2200,
     location: "Petra",
     country: "Jordan",
@@ -1114,7 +1114,7 @@ const sampleListings = [
   {
     title: "Kolkata Dum Dum Colonial Bungalow",
     description: "Atmospheric colonial bungalow in north Kolkata once occupied by a British indigo planter.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=60",
     price: 1300,
     location: "Kolkata",
     country: "India",
@@ -1122,7 +1122,7 @@ const sampleListings = [
   {
     title: "Plitvice Lakes Forest Cottage",
     description: "Timber cottage on the edge of Plitvice Lakes National Park with daily waterfall and lake access.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=60",
     price: 1700,
     location: "Plitvice",
     country: "Croatia",
@@ -1130,7 +1130,7 @@ const sampleListings = [
   {
     title: "Palermo Street Food Apartment",
     description: "Lively apartment above Palermo's Ballarò street food market. Cooking classes and Sicilian wine included.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=800&q=60",
     price: 1600,
     location: "Palermo",
     country: "Italy",
@@ -1138,7 +1138,7 @@ const sampleListings = [
   {
     title: "Yelapa Jungle Beach Palapa",
     description: "Secluded palapa hut accessible only by boat in the jungle bay of Yelapa, Mexico. No roads, pure paradise.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=60",
     price: 1300,
     location: "Yelapa",
     country: "Mexico",
@@ -1146,7 +1146,7 @@ const sampleListings = [
   {
     title: "Transylvanian Gothic Manor",
     description: "Eerie and magnificent Gothic manor in the Carpathian mountains of Transylvania, complete with turrets.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=60",
     price: 2400,
     location: "Brasov",
     country: "Romania",
@@ -1154,7 +1154,7 @@ const sampleListings = [
   {
     title: "Mumbai Heritage Mansion",
     description: "Stately art deco mansion in Mumbai's Malabar Hill district with sea-facing verandas and period details.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=60",
     price: 3800,
     location: "Mumbai",
     country: "India",
@@ -1162,7 +1162,7 @@ const sampleListings = [
   {
     title: "Outer Hebrides Blackhouse",
     description: "Authentic restored blackhouse on the Outer Hebrides with thick stone walls, a peat fire, and Harris Tweed.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=60",
     price: 1500,
     location: "Isle of Lewis",
     country: "United Kingdom",
@@ -1170,7 +1170,7 @@ const sampleListings = [
   {
     title: "Garden Route Beach House",
     description: "Bright house on South Africa's Garden Route with whale watching, bungee jumping, and Tsitsikamma forest.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=800&q=60",
     price: 2100,
     location: "Knysna",
     country: "South Africa",
@@ -1178,7 +1178,7 @@ const sampleListings = [
   {
     title: "Salzburg Music Lover's Apartment",
     description: "Elegant apartment in Mozart's birthplace city with concert tickets to the Salzburg Festival included.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=800&q=60",
     price: 2800,
     location: "Salzburg",
     country: "Austria",
@@ -1186,7 +1186,7 @@ const sampleListings = [
   {
     title: "Tropical Treehouse Retreat",
     description: "Multi-level treehouse in a tropical garden in Tulum with a cenote swimming pool and jungle spa.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=60",
     price: 3700,
     location: "Tulum",
     country: "Mexico",
@@ -1194,7 +1194,7 @@ const sampleListings = [
   {
     title: "Lake Geneva Vineyard Estate",
     description: "Terraced vineyard estate above Lake Geneva with panoramic views from Montreux to Mont Blanc.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=60",
     price: 6200,
     location: "Lavaux",
     country: "Switzerland",
@@ -1202,7 +1202,7 @@ const sampleListings = [
   {
     title: "Namaqualand Flower Cottage",
     description: "Remote cottage in Namaqualand which transforms into a carpet of wildflowers every August and September.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=800&q=60",
     price: 1200,
     location: "Springbok",
     country: "South Africa",
@@ -1210,7 +1210,7 @@ const sampleListings = [
   {
     title: "Bagan Temple View Guesthouse",
     description: "Terracotta guesthouse with a rooftop from which you can watch hot air balloons rise over 2000 Bagan temples.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=60",
     price: 1100,
     location: "Bagan",
     country: "Myanmar",
@@ -1218,7 +1218,7 @@ const sampleListings = [
   {
     title: "Canary Islands Volcanic Farmhouse",
     description: "Stone farmhouse in a UNESCO biosphere reserve on La Palma, surrounded by star-gazing observatories.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?auto=format&fit=crop&w=800&q=60",
     price: 2000,
     location: "La Palma",
     country: "Spain",
@@ -1226,7 +1226,7 @@ const sampleListings = [
   {
     title: "Rajasthan Desert Tent",
     description: "Opulent tented camp in the Thar Desert near Jaisalmer with camel safaris and Rajasthani folk evenings.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=60",
     price: 3100,
     location: "Jaisalmer",
     country: "India",
@@ -1234,7 +1234,7 @@ const sampleListings = [
   {
     title: "Bucharest Interwar Mansion",
     description: "Elegant interwar mansion in Bucharest's Floreasca quarter, evoking the city's golden age as the Paris of the East.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=800&q=60",
     price: 1700,
     location: "Bucharest",
     country: "Romania",
@@ -1242,7 +1242,7 @@ const sampleListings = [
   {
     title: "Mekong Delta Floating Homestay",
     description: "Floating bamboo homestay on the Mekong Delta with rowing boat tours through water hyacinth channels.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=60",
     price: 600,
     location: "Can Tho",
     country: "Vietnam",
@@ -1250,7 +1250,7 @@ const sampleListings = [
   {
     title: "Lake Baikal Ice Camp",
     description: "Seasonal ice camp on the surface of the world's deepest lake. Dog-sledding, ice fishing, and Siberian steam baths.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=60",
     price: 4600,
     location: "Irkutsk",
     country: "Russia",
@@ -1258,7 +1258,7 @@ const sampleListings = [
   {
     title: "Yucatan Hacienda",
     description: "Grand 17th century henequen hacienda in the Yucatan jungle with a cenote, and Mayan ruins on the grounds.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=60",
     price: 5500,
     location: "Merida",
     country: "Mexico",
@@ -1266,7 +1266,7 @@ const sampleListings = [
   {
     title: "Turin Baroque Palace Suite",
     description: "Suite within a Savoy-era baroque palace in Turin, the elegant and underrated northern Italian capital.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=60",
     price: 3400,
     location: "Turin",
     country: "Italy",
@@ -1274,7 +1274,7 @@ const sampleListings = [
   {
     title: "Tioman Island Beach Chalet",
     description: "Simple thatched chalet above the coral-rich waters of Malaysia's Tioman Island marine park.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=60",
     price: 900,
     location: "Tioman Island",
     country: "Malaysia",
@@ -1282,7 +1282,7 @@ const sampleListings = [
   {
     title: "Girona Medieval Townhouse",
     description: "Stone townhouse in Girona's remarkably preserved medieval Jewish quarter, with a flower-lined inner courtyard.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=60",
     price: 2300,
     location: "Girona",
     country: "Spain",
@@ -1290,7 +1290,7 @@ const sampleListings = [
   {
     title: "Lake Atitlan Mayan Guesthouse",
     description: "Guesthouse run by a Tzutujil Mayan family on the shores of volcano-ringed Lake Atitlan in Guatemala.",
-    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=60" },
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=60",
     price: 750,
     location: "Santiago Atitlan",
     country: "Guatemala",
