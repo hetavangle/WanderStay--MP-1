@@ -1,0 +1,27 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const listingSchema = new Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  description: { type: String },
+  image: {
+    type: String,
+    //to check if image is null or undefined or doesnt exist
+    default:
+      "https://images.unsplash.com/photo-1759203111456-b63e81a03cec?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //this is for checking image is there but link is empty (for client/user)
+    set: (v) =>
+      v === ""
+        ? "https://images.unsplash.com/photo-1759203111456-b63e81a03cec?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        : v,
+  },
+  price: { type: Number },
+  location: { type: String },
+  country: { tyep: String },
+});
+
+const Listing = mongoose.model("Listing", listingSchema);
+module.exports = Listing;
