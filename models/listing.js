@@ -20,7 +20,7 @@ const listingSchema = new Schema({
   },
   price: { type: Number },
   location: { type: String },
-  country: { tyep: String },
+  country: { type: String },
 });
 
 const Listing = mongoose.model("Listing", listingSchema);
