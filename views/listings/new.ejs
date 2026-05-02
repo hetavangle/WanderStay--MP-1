@@ -1,23 +1,23 @@
 <% layout("/layouts/boilerplate") %>
 
 
-  <form method="POST" action="/listings">
+    <form method="POST" action="/listings">
     <div class="row">
       <div class="col-8 offset-2">
         <br><br>
         <h3>Create a New Listing</h3>
         <div class="mb-3">
-          <label for="title" class="form-label">Title</label>
-          <input name="listing[title]" placeholder="enter title" type="text" class="form-control">
-        </div>
+        <label for="title" class="form-label">Title</label>
+        <input name="listing[title]" placeholder="enter title" type="text" class="form-control">
+      </div>
         <div class="mb-3">
-          <label for="description" class="form-label">Description</label>
-          <textarea name="listing[description]" class="form-control"></textarea>
-        </div>
+        <label for="description" class="form-label">Description</label>
+        <textarea name="listing[description]" class="form-control"></textarea>
+      </div>
         <div class="mb-3">
-          <label for="image" class="form-label">Image Link</label>
-          <input name="listing[image]" placeholder="enter image URL/Link" type="text" class="form-control">
-        </div>
+        <label for="image" class="form-label">Image Link</label>
+        <input name="listing[image]" placeholder="enter image URL/Link" type="text" class="form-control">
+      </div>
         <div class="row">
           <div class="mb-3 col-md-4">
             <label for="price" class="form-label">Price</label>
@@ -34,8 +34,8 @@
           <input name="listing[location]" placeholder="enter location" type="text" class="form-control">
         </div>
 
-        <br>
-        <br>
+      <br>
+      <br>
         <button class="btn add-btn">Add</button>
         <br><br>
   </form>
