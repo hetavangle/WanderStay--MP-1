@@ -2,9 +2,9 @@
 
   <body>
     <h3>All listings</h3>
-
-    <div class="row row-cols-lg-5">
+    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
       <% for(let listing of allListings){ %>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       <div class="card" style="width: 20rem;">
         <img src="<%= listing.image %>" class="card-img-top" alt="listing_image">
@@ -21,6 +21,12 @@
           <div class="card">
             <div class="card-img-wrapper main-wrap">
               <img src="<%= listing.image %>" class="card-img-top main-img" alt="listing_image"
+=======
+        <a href="/listings/<%= listing._id %>">
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="<%= listing.image %>" class="card-img-top" alt="listing_image"
+>>>>>>> 56f949bdcd0422c0cf0334fc143542e15c324c3f
                 style="height: 20rem; width: 20rem;">
               <div class="card-img-overlay">
                 <!-- <h5 class="card-title" style="color: aliceblue;">&#8377;<%= listing.price
@@ -39,8 +45,10 @@
           </div>
         </a>
         <% } %>
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 56f949bdcd0422c0cf0334fc143542e15c324c3f
     </div>
-    
 
   </body>
