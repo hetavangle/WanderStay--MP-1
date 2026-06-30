@@ -2,41 +2,25 @@
 
   <body>
     <h3>All listings</h3>
+
     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
       <% for(let listing of allListings){ %>
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-      <div class="card" style="width: 20rem;">
-        <img src="<%= listing.image %>" class="card-img-top" alt="listing_image">
-        <div class="card-body">
-          <h5 class="card-title"><%= listing.title %></h5>
-          <p class="card-text"><%= listing.description %></p>
-         
-          <a href="/listings/<%= listing._id%>" class="btn btn-primary">&#8377;<%= listing.price ? listing.price.toLocaleString("en-IN") : "—" %> / night</a>
-        </div>
-      </div>
-      <% } %>
-=======
-        <a href="/listings/<%= listing._id %>">
-          <div class="card">
-            <div class="card-img-wrapper main-wrap">
-              <img src="<%= listing.image %>" class="card-img-top main-img" alt="listing_image"
-=======
-        <a href="/listings/<%= listing._id %>">
-          <div class="card">
+
+        <a href="/listings/<%= listing._id %>" class="text-decoration-none text-dark">
+          <div class="card" style="width: 20rem;">
             <div class="card-img-wrapper">
               <img src="<%= listing.image %>" class="card-img-top" alt="listing_image"
->>>>>>> 56f949bdcd0422c0cf0334fc143542e15c324c3f
                 style="height: 20rem; width: 20rem;">
-              <div class="card-img-overlay">
-                <!-- <h5 class="card-title" style="color: aliceblue;">&#8377;<%= listing.price
-                    ?listing.price.toLocaleString("en-IN") : "—" %> / night</h5> -->
-              </div> <!--for showing text over image -->
+              <div class="card-img-overlay"></div>
             </div>
+
             <div class="card-body">
-              <h5 class="card-title"><b>
+              <h5 class="card-title">
+                <b>
                   <%= listing.title %>
-                </b></h5>
+                </b>
+              </h5>
+
               <p class="card-text">
                 <%= listing.description %><br>
                   &#8377;<%= listing.price ? listing.price.toLocaleString("en-IN") : "—" %> / night
@@ -44,11 +28,7 @@
             </div>
           </div>
         </a>
-        <% } %>
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> 56f949bdcd0422c0cf0334fc143542e15c324c3f
-    </div>
 
+        <% } %>
+    </div>
   </body>
