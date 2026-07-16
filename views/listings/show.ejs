@@ -1,9 +1,9 @@
 <% layout("/layouts/boilerplate") %>
-<div class="row mt-3">
-  <div class="col-8 offset-3">
+<div class="row mt-3 listing-card">
+  <div class="col-8 offset-3 listing-card">
     <h3><%= listing.title %></h3>
   </div>
-  <div class="card col-6 offset-3 show-card">
+  <div class="col-6 offset-3 card show-card listing-card">
     <img
       src="<%=listing.image %>"
       class="card-img-top show-image"
@@ -23,18 +23,23 @@
   <div class="btns">
     <a
       href="/listings/<%= listing._id %>/edit"
-      class="btn btn-dark col-1 offset-3 edit-btn"
+      class="col-1 offset-3 btn btn-dark edit-btn"
       >Edit</a
     >
 
     <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
-      <button class="btn btn-dark offset-5">Delete</button>
+      <button class="offset-5 btn btn-dark">Delete</button>
     </form>
   </div>
 
   <div class="row mt-3">
     <h4>Guest Reviews</h4>
-    <form action="/listings/<%= listing._id %>/reviews" method="POST">
+    <form
+      action="/listings/<%= listing._id %>/reviews"
+      method="POST"
+      novalidate
+      class="needs-validation"
+    >
       <div>
         <label for="rating" class="form-label">Rating</label>
         <input
@@ -54,9 +59,28 @@
           cols="50"
           rows="5"
           class="form-control"
+          required
         ></textarea>
+        <div class="invalid-feedback">
+          Please add a review before submitting
+        </div>
       </div>
       <button class="btn btn-outline-dark">Submit</button>
     </form>
+    <hr />
+
+    <p><b>All Reviews</b></p>
+    <div class="row">
+    <% for (review of listing.reviews) { %>
+    <div class="col-6 mb-3 card">
+      <div class="card-body">
+        <h5 class="card-text">Jane Doe</h5>
+        <p class="card-text"> <%= review.comment %> </p>
+        <p class="card-text"> <%= review.rating %> </p>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  
   </div>
 </div>
