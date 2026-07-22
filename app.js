@@ -8,6 +8,7 @@ const ExpressError = require("./utility/ExpressError.js");
 const session = require("express-session");
 const flash = require("connect-flash");
 
+
 const listings = require("./routes/listing.js");
 const reviews = require("./routes/review.js");
 
@@ -50,6 +51,7 @@ app.use(flash());
 
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
+  res.locals.error = req.flash("error");
   next();
 })
 
