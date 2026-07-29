@@ -27,20 +27,22 @@ router.get("/new", isLoggedIn, wrapAsync(async (req, res) => {
     res.render("listings/new.ejs");
 }));
 
-//details route
+//Show route
 router.get("/:id", wrapAsync(async (req, res) => {
     let { id } = req.params;
-    const listing = await Listing.findById(id).populate("reviews");
+    const listing = await Listing.findById(id).populate("reviews").populate("owner");
     if (!listing) {
         req.flash("error", "Oops! That property doesn't exist or may have been removed.")
         return res.redirect("/listings");
     }
+    console.log(listing);
     res.render("listings/show.ejs", { listing });
 }));
 
 //new hotel addition route
 router.post("/", validateListing, isLoggedIn, wrapAsync(async (req, res, next) => {
     const newListing = new Listing(req.body.listing);
+    newListing.owner = req.user._id;
     await newListing.save();
     req.flash("success", "Congratulations! Your new property is now live and ready to welcome guests.")
     res.redirect("/listings");
