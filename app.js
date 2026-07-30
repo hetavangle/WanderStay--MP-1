@@ -45,7 +45,6 @@ const sessionOptions = {
     httpOnly: true
   }
 }
-
 app.use(session(sessionOptions));
 app.use(flash());
 

@@ -4,7 +4,7 @@ const wrapAsync = require("../utility/wrapAsync.js");
 const { listingSchema } = require("../schema.js");
 const ExpressError = require("../utility/ExpressError.js");
 const Listing = require("../models/listing.js");
-const { isLoggedIn } = require("../middleware.js");
+const { isLoggedIn, isOwner } = require("../middleware.js");
 
 const validateListing = (req, res, next) => {
     let { error } = listingSchema.validate(req.body);
@@ -49,7 +49,7 @@ router.post("/", validateListing, isLoggedIn, wrapAsync(async (req, res, next) =
 }));
 
 //edit route
-router.get("/:id/edit", isLoggedIn, wrapAsync(async (req, res) => {
+router.get("/:id/edit", isLoggedIn, isOwner, wrapAsync(async (req, res) => {
     let { id } = req.params;
     const listing = await Listing.findById(id);
     if (!listing) {
@@ -60,15 +60,14 @@ router.get("/:id/edit", isLoggedIn, wrapAsync(async (req, res) => {
 }));
 
 //update route
-router.put("/:id", isLoggedIn, validateListing, wrapAsync(async (req, res) => {
-    let { id } = req.params;
+router.put("/:id", isLoggedIn, isOwner, validateListing, wrapAsync(async (req, res) => {
     await Listing.findByIdAndUpdate(id, { ...req.body.listing });
     req.flash("success", "Changes saved! Your listing details have been updated.")
     res.redirect(`/listings/${id}`);
 }));
 
 //delete route
-router.delete("/:id", isLoggedIn, wrapAsync(async (req, res) => {
+router.delete("/:id", isLoggedIn, isOwner, wrapAsync(async (req, res) => {
     let { id } = req.params;
     let deletedListing = await Listing.findByIdAndDelete(id);
     console.log(deletedListing);
