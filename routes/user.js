@@ -5,30 +5,13 @@ const wrapAsync = require("../utility/wrapAsync.js");
 const passport = require("passport")
 const { savedRedirectUrl } = require("../middleware.js");
 
-router.get("/signup", (req, res) => {
-    res.render("users/signup.ejs");
-});
+const userController = require("../controllers/users.js");
+
+router.get("/signup", userController.renderSignupForm);
 
 router.post(
     "/signup",
-    wrapAsync(async (req, res, next) => {
-        try {
-            let { username, email, password } = req.body;
-            const newUser = new User({ email, username });
-            const registeredUser = await User.register(newUser, password);
-            console.log(registeredUser);
-            req.login(registeredUser, (err) => {
-                if (err) {
-                    return next(err);
-                }
-                req.flash("success", "Registration successful! Welcome to WanderStay.");
-                return res.redirect("/listings");
-            });
-        } catch (e) {
-            req.flash("error", e.message);
-            return res.redirect("/signup");
-        }
-    }),
+    wrapAsync(userController.signup),
 );
 
 router.get("/login", (req, res) => {
