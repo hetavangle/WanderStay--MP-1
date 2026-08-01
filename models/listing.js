@@ -15,6 +15,22 @@ const listingSchema = new Schema({
   price: Number,
   location: String,
   country: String,
+  geometry: {
+    type: {
+      type: String,
+      enum: ["Point"],
+      required: true,
+    },
+    coordinates: {
+      type: [Number],
+      required: true,
+      validate: {
+        validator: (coordinates) =>
+          coordinates.length === 2 && coordinates.every(Number.isFinite),
+        message: "Coordinates must contain longitude and latitude.",
+      },
+    },
+  },
   reviews: [
     {
       type: Schema.Types.ObjectId,
@@ -26,6 +42,8 @@ const listingSchema = new Schema({
     ref: "User",
   },
 });
+
+listingSchema.index({ geometry: "2dsphere" });
 
 listingSchema.post("findOneAndDelete", async (listing) => {
   if (listing) {

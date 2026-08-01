@@ -17,3 +17,39 @@
         }, false)
     })
 })();
+
+const mapElement = document.getElementById("map");
+
+if (mapElement) {
+    const mapToken = mapElement.dataset.mapToken;
+    const coordinates = mapElement.dataset.mapCoordinates
+        .split(",")
+        .map(Number);
+
+    const showMapError = () => {
+        mapElement.classList.add("listing-map-error");
+        mapElement.textContent = "The map for this location is currently unavailable.";
+    };
+
+    if (
+        !mapToken ||
+        !window.maptilersdk ||
+        coordinates.length !== 2 ||
+        !coordinates.every(Number.isFinite)
+    ) {
+        showMapError();
+    } else {
+        maptilersdk.config.apiKey = mapToken;
+        const map = new maptilersdk.Map({
+            container: mapElement,
+            style: maptilersdk.MapStyle.STREETS,
+            center: coordinates,
+            zoom: 12,
+            interactive: false,
+        });
+
+        new maptilersdk.Marker({ color: "#ff3d60" })
+            .setLngLat(coordinates)
+            .addTo(map);
+    }
+}

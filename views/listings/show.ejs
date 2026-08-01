@@ -34,9 +34,10 @@
     </form>
   </div>
   <% } %>
-  <hr />
-  <div class="row mt-3">
+
+  <div class="col-8 offset-3 mt-3">
     <% if(currUser){ %>
+    <hr />
     <h2>Leave a review</h2>
     <form
       action="/listings/<%= listing._id %>/reviews"
@@ -110,7 +111,7 @@
       <button class="mb-2 mt-2 btn btn-outline-dark">Submit</button>
     </form>
     <hr />
-    <% } %>
+    <% } %> <% if(listing.reviews.length > 0) { %>
     <div class="row">
       <p><b>All Reviews</b></p>
       <% for (review of listing.reviews) { %>
@@ -133,5 +134,20 @@
       </div>
       <% } %>
     </div>
+    <% } %>
   </div>
+  <section class="col-6 offset-3 mt-3 listing-map-section">
+    <h3>Where you'll be</h3>
+    <p class="listing-map-location">
+      <%= listing.location %>, <%= listing.country %>
+    </p>
+    <div
+      id="map"
+      class="listing-static-map"
+      data-map-token="<%= mapToken %>"
+      data-map-coordinates="<%= mapCoordinates.join(',') %>"
+      role="img"
+      aria-label="Map showing <%= listing.location %>, <%= listing.country %>"
+    ></div>
+  </section>
 </div>
