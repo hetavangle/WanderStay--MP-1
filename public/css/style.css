@@ -202,14 +202,6 @@ body {
   outline-offset: 3px;
 }
 
-
-
-
-
-
-
-
-/* ── New Listing Page ai generated code ─────────────────────────────── */
 .new-listing-wrapper {
   min-height: calc(100vh - 10rem);
   display: flex;
@@ -491,4 +483,37 @@ body {
   .form-header h2 {
     font-size: 1.5rem;
   }
+}
+
+/* filters css code in index.ejs file */
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter {
+  text-align: center;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  opacity: 0.7;
+}
+
+.filter:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.tax-info {
+  display: none;
+}
+
+.tax-toggle {
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  height: 3.25rem;
+  padding: 1rem;
+  /* margin-left: rem; */
+  display: flex;
+  align-items: center;
 }
