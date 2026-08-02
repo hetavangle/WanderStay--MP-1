@@ -22,6 +22,8 @@ const mapElement = document.getElementById("map");
 
 if (mapElement) {
     const mapToken = mapElement.dataset.mapToken;
+    const mapTitle = mapElement.dataset.mapTitle;
+    const mapLocation = mapElement.dataset.mapLocation;
     const coordinates = mapElement.dataset.mapCoordinates
         .split(",")
         .map(Number);
@@ -48,8 +50,38 @@ if (mapElement) {
             interactive: false,
         });
 
-        new maptilersdk.Marker({ color: "#ff3d60" })
+        const popupContent = document.createElement("div");
+        popupContent.className = "listing-map-popup";
+
+        const popupTitle = document.createElement("h4");
+        popupTitle.className = "listing-map-popup-title";
+        popupTitle.textContent = mapTitle;
+
+        const popupLocation = document.createElement("p");
+        popupLocation.className = "listing-map-popup-location";
+        popupLocation.textContent = mapLocation;
+
+        popupContent.append(popupTitle, popupLocation);
+
+        const popup = new maptilersdk.Popup({ offset: 25 })
+            .setDOMContent(popupContent);
+
+        const markerElement = document.createElement("button");
+        markerElement.type = "button";
+        markerElement.className = "listing-home-marker";
+        markerElement.setAttribute("aria-label", `View ${mapTitle}`);
+
+        const homeIcon = document.createElement("i");
+        homeIcon.className = "fa-solid fa-house";
+        homeIcon.setAttribute("aria-hidden", "true");
+        markerElement.append(homeIcon);
+
+        new maptilersdk.Marker({
+            element: markerElement,
+            anchor: "bottom",
+        })
             .setLngLat(coordinates)
+            .setPopup(popup)
             .addTo(map);
     }
 }

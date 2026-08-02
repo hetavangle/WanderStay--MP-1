@@ -146,6 +146,8 @@
       class="listing-static-map"
       data-map-token="<%= mapToken %>"
       data-map-coordinates="<%= mapCoordinates.join(',') %>"
+      data-map-title="<%= listing.title %>"
+      data-map-location="<%= listing.location %>, <%= listing.country %>"
       role="img"
       aria-label="Map showing <%= listing.location %>, <%= listing.country %>"
     ></div>

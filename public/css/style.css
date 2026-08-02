@@ -158,6 +158,50 @@ body {
   text-align: center;
 }
 
+.listing-map-popup {
+  padding: 0.2rem 0.15rem;
+}
+
+.listing-map-popup-title {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.listing-map-popup-location {
+  margin: 0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.listing-home-marker {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  background-color: #ff3d60;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.listing-home-marker:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.listing-home-marker:focus-visible {
+  outline: 3px solid rgba(255, 61, 96, 0.35);
+  outline-offset: 3px;
+}
+
 
 
 
