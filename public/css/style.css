@@ -15,8 +15,12 @@ body {
   background-color: white;
 }
 
+.navbar-brand {
+  margin-top: 0.5rem;
+}
+
 .fa-compass {
-  color: #ff3d60;
+  color: #ff385c;
   font-size: 2rem;
 }
 
@@ -106,7 +110,7 @@ body {
 
 .add-btn,
 .edit-btn {
-  background-color: #ff3d60 !important;
+  background-color: #ff385c !important;
   border: none !important;
 }
 
@@ -184,7 +188,7 @@ body {
   justify-content: center;
   color: #fff;
   font-size: 1rem;
-  background-color: #ff3d60;
+  background-color: #ff385c;
   border: 2px solid #fff;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -237,7 +241,7 @@ body {
   align-items: center;
   gap: 0.4rem;
   background: #fff0f3;
-  color: #ff3d60;
+  color: #ff385c;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -256,7 +260,7 @@ body {
 }
 
 .form-header h2 .highlight {
-  color: #ff3d60;
+  color: #ff385c;
 }
 
 .form-subtext {
@@ -290,7 +294,7 @@ body {
 }
 
 .styled-input:focus {
-  border-color: #ff3d60 !important;
+  border-color: #ff385c !important;
   box-shadow: 0 0 0 3px rgba(255, 61, 96, 0.12) !important;
   background: #fff !important;
   outline: none !important;
@@ -378,14 +382,14 @@ body {
 }
 
 .btn-cancel:hover {
-  border-color: #ff3d60 !important;
-  color: #ff3d60 !important;
+  border-color: #ff385c !important;
+  color: #ff385c !important;
 }
 
 /* Side panel */
 .new-listing-side-panel {
   flex: 0 0 38%;
-  background: linear-gradient(160deg, #ff3d60 0%, #ff8c60 100%);
+  background: linear-gradient(160deg, #ff385c 0%, #ff8c60 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -485,7 +489,7 @@ body {
   }
 }
 
-/* filters css code in index.ejs file */
+/* filters styling */
 #filters {
   display: flex;
   flex-wrap: wrap;
@@ -509,11 +513,34 @@ body {
 }
 
 .tax-toggle {
-  border: 1px solid black;
-  border-radius: 1.5rem;
+  border: 2px solid black;
+  border-radius: 1.25rem;
   height: 3.25rem;
   padding: 1rem;
-  /* margin-left: rem; */
+  margin-left: 5rem;
   display: flex;
   align-items: center;
+}
+
+/* search bar styling */
+.search-btn {
+  background-color: #da1249;
+  color: #fff;
+  border-radius: 25px;
+  padding: 0 1rem 0 1rem;
+}
+
+.search-btn:hover {
+  background-color: #da1249;
+  color: #fff;
+}
+
+.search-btn i {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.search-inp {
+  border-radius: 25px;
+  padding: 0.5rem 5rem 0.5rem 5rem;
 }

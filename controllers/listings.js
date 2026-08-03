@@ -5,9 +5,19 @@ const {
   isValidPoint,
 } = require("../utility/mapTiler.js");
 
+const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 module.exports.index = async (req, res) => {
-  const allListings = await Listing.find({});
-  res.render("listings/index.ejs", { allListings });
+  const searchQuery = typeof req.query.q === "string" ? req.query.q.trim() : "";
+  const filter = searchQuery
+    ? {
+        $or: ["title", "location", "country", "description"].map((field) => ({
+          [field]: { $regex: escapeRegex(searchQuery), $options: "i" },
+        })),
+      }
+    : {};
+  const allListings = await Listing.find(filter);
+  res.render("listings/index.ejs", { allListings, searchQuery });
 };
 module.exports.renderNewForm = async (req, res) => {
   res.render("listings/new.ejs");
