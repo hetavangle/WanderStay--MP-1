@@ -71,6 +71,26 @@
       </div>
 
       <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select
+          id="category"
+          name="listing[category]"
+          class="form-select"
+          required
+        >
+          <% for (const category of listingCategories) { %>
+            <option
+              value="<%= category.value %>"
+              <%= (listing.category || "Trending") === category.value ? "selected" : "" %>
+            >
+              <%= category.value %>
+            </option>
+          <% } %>
+        </select>
+        <div class="invalid-feedback">Please select a category.</div>
+      </div>
+
+      <div class="mb-3">
         <label for="location" class="form-label">Location</label>
         <input
           name="listing[location]"

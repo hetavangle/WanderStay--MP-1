@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const Review = require("./review.js");
+const {
+  LISTING_CATEGORY_VALUES,
+} = require("../utility/listingCategories.js");
 
 const listingSchema = new Schema({
   title: {
@@ -15,6 +18,13 @@ const listingSchema = new Schema({
   price: Number,
   location: String,
   country: String,
+  category: {
+    type: String,
+    enum: LISTING_CATEGORY_VALUES,
+    required: true,
+    default: "Trending",
+    index: true,
+  },
   geometry: {
     type: {
       type: String,

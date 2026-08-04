@@ -4,23 +4,44 @@ const {
   getMapTilerApiKey,
   isValidPoint,
 } = require("../utility/mapTiler.js");
+const {
+  listingCategories,
+  LISTING_CATEGORY_VALUES,
+} = require("../utility/listingCategories.js");
 
 const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 module.exports.index = async (req, res) => {
   const searchQuery = typeof req.query.q === "string" ? req.query.q.trim() : "";
-  const filter = searchQuery
-    ? {
-        $or: ["title", "location", "country", "description"].map((field) => ({
-          [field]: { $regex: escapeRegex(searchQuery), $options: "i" },
-        })),
-      }
-    : {};
+  const categoryQuery =
+    typeof req.query.category === "string" ? req.query.category.trim() : "";
+  const selectedCategory = LISTING_CATEGORY_VALUES.includes(categoryQuery)
+    ? categoryQuery
+    : "";
+  const filter = {};
+
+  if (searchQuery) {
+    filter.$or = ["title", "location", "country", "description"].map(
+      (field) => ({
+        [field]: { $regex: escapeRegex(searchQuery), $options: "i" },
+      }),
+    );
+  }
+
+  if (selectedCategory) {
+    filter.category = selectedCategory;
+  }
+
   const allListings = await Listing.find(filter);
-  res.render("listings/index.ejs", { allListings, searchQuery });
+  res.render("listings/index.ejs", {
+    allListings,
+    searchQuery,
+    listingCategories,
+    selectedCategory,
+  });
 };
 module.exports.renderNewForm = async (req, res) => {
-  res.render("listings/new.ejs");
+  res.render("listings/new.ejs", { listingCategories });
 };
 
 module.exports.showListing = async (req, res) => {
@@ -73,7 +94,11 @@ module.exports.renderEditForm = async (req, res) => {
   }
   let originalImgUrl = listing.image.url;
   originalImgUrl = originalImgUrl.replace("/upload", "/upload/h_300,w_250");
-  res.render("listings/edit.ejs", { listing, originalImgUrl });
+  res.render("listings/edit.ejs", {
+    listing,
+    originalImgUrl,
+    listingCategories,
+  });
 };
 module.exports.updateListing = async (req, res) => {
   let { id } = req.params;
