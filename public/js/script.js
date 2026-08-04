@@ -1,25 +1,52 @@
 (() => {
   "use strict";
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
   const forms = document.querySelectorAll(".needs-validation");
 
-  // Loop over them and prevent submission
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      "submit",
-      (event) => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
+  forms.forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
 
-        form.classList.add("was-validated");
-      },
-      false,
-    );
+      form.classList.add("was-validated");
+    });
   });
 })();
+
+const currentPath = window.location.pathname;
+const navLinks = document.querySelectorAll("[data-nav-path]");
+
+navLinks.forEach((link) => {
+  const linkPath = link.dataset.navPath;
+  const isExploreRoute =
+    linkPath === "/listings" &&
+    currentPath.startsWith("/listings") &&
+    currentPath !== "/listings/new";
+
+  if (currentPath === linkPath || isExploreRoute) {
+    link.setAttribute("aria-current", "page");
+  }
+});
+
+const taxSwitch = document.getElementById("tax-switch");
+
+if (taxSwitch) {
+  taxSwitch.addEventListener("change", () => {
+    document.querySelectorAll(".tax-info").forEach((taxInfo) => {
+      taxInfo.classList.toggle("is-visible", taxSwitch.checked);
+    });
+  });
+}
+
+document.querySelectorAll("form[data-confirm]").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    if (!window.confirm(form.dataset.confirm)) {
+      event.preventDefault();
+    }
+  });
+});
 
 const mapElement = document.getElementById("map");
 
@@ -31,8 +58,7 @@ if (mapElement) {
 
   const showMapError = () => {
     mapElement.classList.add("listing-map-error");
-    mapElement.textContent =
-      "The map for this location is currently unavailable.";
+    mapElement.textContent = "The map for this location is currently unavailable.";
   };
 
   if (
@@ -65,9 +91,7 @@ if (mapElement) {
 
     popupContent.append(popupTitle, popupLocation);
 
-    const popup = new maptilersdk.Popup({ offset: 25 }).setDOMContent(
-      popupContent,
-    );
+    const popup = new maptilersdk.Popup({ offset: 25 }).setDOMContent(popupContent);
 
     const markerElement = document.createElement("button");
     markerElement.type = "button";

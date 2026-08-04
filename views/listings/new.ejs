@@ -1,108 +1,84 @@
 <% layout("/layouts/boilerplate") %>
 
-<form
-  method="POST"
-  action="/listings"
-  novalidate
-  class="needs-validation"
-  enctype="multipart/form-data"
->
-  <div class="row mt-3">
-    <div class="col-8 offset-2">
-      <!-- <br><br> -->
-      <h3>Create a New Listing</h3>
-      <div class="mb-3">
-        <label for="title" class="form-label">Title</label>
-        <input
-          name="listing[title]"
-          placeholder="enter title"
-          type="text"
-          class="form-control"
-          required
-        />
-        <div class="valid-feedback">Input accepted</div>
-        <div class="invalid-feedback">Please enter a title</div>
+<div class="page-shell form-page">
+  <a class="back-link" href="/listings"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to stays</a>
+  <div class="editor-layout">
+    <section class="editor-panel" aria-labelledby="new-listing-title">
+      <div class="form-header">
+        <p class="section-kicker">Host on WanderStay</p>
+        <h1 id="new-listing-title">Share a place guests will remember.</h1>
+        <p>Add the essentials now. You can refine the details as your listing evolves.</p>
       </div>
-      <div class="mb-3">
-        <label for="description" class="form-label">Description</label>
-        <textarea
-          name="listing[description]"
-          class="form-control"
-          required
-        ></textarea>
-        <div class="invalid-feedback">Please provide a description.</div>
-        <div class="valid-feedback">Input accepted</div>
-      </div>
-      <div class="mb-3">
-        <label for="image" class="form-label">Upload Property Image</label>
-        <input
-          name="listing[image]"
-          type="file"
-          class="form-control"
-          required
-        />
-      </div>
-      <div class="row">
-        <div class="col-md-4 mb-3">
-          <label for="price" class="form-label">Price</label>
-          <input
-            name="listing[price]"
-            placeholder="enter price"
-            type="text"
-            class="form-control"
-            required
-          />
-          <div class="invalid-feedback">
-            Please enter a price greater than 0
+      <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="form-field">
+          <label for="title" class="form-label">Listing title</label>
+          <input id="title" name="listing[title]" placeholder="Cliffside cabin near Munnar" type="text" class="form-control" required />
+          <div class="invalid-feedback">Please enter a title.</div>
+        </div>
+
+        <div class="form-field">
+          <label for="description" class="form-label">Description</label>
+          <textarea id="description" name="listing[description]" class="form-control" rows="5" placeholder="Describe the setting, atmosphere, and what makes the stay special." required></textarea>
+          <div class="invalid-feedback">Please provide a description.</div>
+        </div>
+
+        <div class="form-field">
+          <label for="image" class="form-label">Property image</label>
+          <input id="image" name="listing[image]" type="file" class="form-control" accept="image/*" required />
+          <p class="form-help">Use a bright landscape image that clearly shows the property.</p>
+          <div class="invalid-feedback">Please upload a property image.</div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="price" class="form-label">Nightly price</label>
+            <div class="input-prefix">
+              <span aria-hidden="true">&#8377;</span>
+              <input id="price" name="listing[price]" placeholder="4500" type="number" min="1" class="form-control" required />
+            </div>
+            <div class="invalid-feedback">Please enter a price greater than 0.</div>
           </div>
-          <div class="valid-feedback">Input accepted</div>
+          <div class="form-field">
+            <label for="category" class="form-label">Category</label>
+            <select id="category" name="listing[category]" class="form-select" required>
+              <option value="" selected disabled>Select a category</option>
+              <% for (const category of listingCategories) { %>
+                <option value="<%= category.value %>"><%= category.value %></option>
+              <% } %>
+            </select>
+            <div class="invalid-feedback">Please select a category.</div>
+          </div>
         </div>
-        <div class="col-md-8 mb-3">
-          <label for="country" class="form-label">Country</label>
-          <input
-            name="listing[country]"
-            placeholder="enter country"
-            type="text"
-            class="form-control"
-            required
-          />
-          <div class="invalid-feedback">Please select your country.</div>
-          <div class="valid-feedback">Input accepted</div>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="location" class="form-label">Location</label>
+            <input id="location" name="listing[location]" placeholder="Munnar, Kerala" type="text" class="form-control" required />
+            <div class="invalid-feedback">Please enter a location.</div>
+          </div>
+          <div class="form-field">
+            <label for="country" class="form-label">Country</label>
+            <input id="country" name="listing[country]" placeholder="India" type="text" class="form-control" required />
+            <div class="invalid-feedback">Please enter a country.</div>
+          </div>
         </div>
-      </div>
 
-      <div class="mb-3">
-        <label for="category" class="form-label">Category</label>
-        <select
-          id="category"
-          name="listing[category]"
-          class="form-select"
-          required
-        >
-          <option value="" selected disabled>Select a category</option>
-          <% for (const category of listingCategories) { %>
-            <option value="<%= category.value %>"><%= category.value %></option>
-          <% } %>
-        </select>
-        <div class="invalid-feedback">Please select a category.</div>
-      </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Publish listing</button>
+          <a class="btn btn-secondary" href="/listings">Cancel</a>
+        </div>
+      </form>
+    </section>
 
-      <div class="mb-3">
-        <label for="location" class="form-label">Location</label>
-        <input
-          name="listing[location]"
-          placeholder="enter location"
-          type="text"
-          class="form-control"
-          required
-        />
-        <div class="invalid-feedback">Please enter your location.</div>
-        <div class="valid-feedback">Input accepted</div>
-      </div>
-      <br />
-      <br />
-      <button class="btn add-btn">Add</button>
-      <br /><br />
-    </div>
+    <aside class="editor-aside">
+      <div class="editor-aside-icon" aria-hidden="true"><i class="fa-regular fa-gem"></i></div>
+      <h2>What guests notice first</h2>
+      <ul>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>A clear title rooted in the destination</span></li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>One strong image with natural light</span></li>
+        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>An honest description of the experience</span></li>
+      </ul>
+      <p>Thoughtful details build trust before a guest sends their first message.</p>
+    </aside>
   </div>
-</form>
+</div>

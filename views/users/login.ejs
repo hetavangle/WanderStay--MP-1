@@ -1,33 +1,28 @@
 <% layout("/layouts/boilerplate") %>
 
-<div class="row mt-3">
-  <h1 class="col-8 offset-2">Log In to WanderStay</h1>
-  <div class="col-8 offset-2">
-    <form action="/login" method="POST" class="needs-validation" novalidate>
-      <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input
-          name="username"
-          id="username"
-          type="text"
-          class="form-control"
-          required
-        />
-        <div class="invalid-feedback">Username is required.</div>
-      </div>
-
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input
-          name="password"
-          id="password"
-          type="password"
-          class="form-control"
-          required
-        />
-        <div class="invalid-feedback">Password is required.</div>
-      </div>
-      <button class="btn btn-success">Log In</button>
-    </form>
-  </div>
+<div class="page-shell auth-page">
+  <section class="auth-card" aria-labelledby="login-title">
+    <div class="auth-copy">
+      <a class="auth-brand" href="/"><i class="fa-regular fa-compass" aria-hidden="true"></i> WanderStay</a>
+      <p class="section-kicker">Welcome back</p>
+      <h1 id="login-title">Continue your journey.</h1>
+      <p>Sign in to host a place, leave a review, or manage your listings.</p>
+    </div>
+    <div class="auth-form-panel">
+      <form action="/login" method="POST" class="needs-validation" novalidate>
+        <div class="form-field">
+          <label for="username" class="form-label">Username</label>
+          <input name="username" id="username" type="text" class="form-control" autocomplete="username" required />
+          <div class="invalid-feedback">Username is required.</div>
+        </div>
+        <div class="form-field">
+          <label for="password" class="form-label">Password</label>
+          <input name="password" id="password" type="password" class="form-control" autocomplete="current-password" required />
+          <div class="invalid-feedback">Password is required.</div>
+        </div>
+        <button class="btn btn-primary auth-submit" type="submit">Log in</button>
+      </form>
+      <p class="auth-switch">New to WanderStay? <a href="/signup">Create an account</a></p>
+    </div>
+  </section>
 </div>

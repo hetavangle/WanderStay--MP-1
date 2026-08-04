@@ -1,44 +1,33 @@
 <% layout("/layouts/boilerplate") %>
 
-<div class="row mt-3">
-  <h1 class="col-8 offset-2">Create Your WanderStay Account</h1>
-  <div class="col-8 offset-2">
-    <form action="/signup" method="POST" class="needs-validation" novalidate>
-      <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input
-          name="username"
-          id="username"
-          type="text"
-          class="form-control"
-          required
-        />
-        <div class="valid-feedback">Username looks good.</div>
-        <div class="invalid-feedback">Username is required.</div>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input
-          name="email"
-          id="email"
-          type="email"
-          class="form-control"
-          required
-        />
-        <div class="invalid-feedback">Email address is required.</div>
-      </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input
-          name="password"
-          id="password"
-          type="password"
-          class="form-control"
-          required
-        />
-        <div class="invalid-feedback">Password is required.</div>
-      </div>
-      <button class="btn btn-success">Sign Up</button>
-    </form>
-  </div>
+<div class="page-shell auth-page">
+  <section class="auth-card" aria-labelledby="signup-title">
+    <div class="auth-copy">
+      <a class="auth-brand" href="/"><i class="fa-regular fa-compass" aria-hidden="true"></i> WanderStay</a>
+      <p class="section-kicker">Join WanderStay</p>
+      <h1 id="signup-title">Make room for a better stay.</h1>
+      <p>Create an account to share thoughtful homes and notes from your travels.</p>
+    </div>
+    <div class="auth-form-panel">
+      <form action="/signup" method="POST" class="needs-validation" novalidate>
+        <div class="form-field">
+          <label for="username" class="form-label">Username</label>
+          <input name="username" id="username" type="text" class="form-control" autocomplete="username" required />
+          <div class="invalid-feedback">Username is required.</div>
+        </div>
+        <div class="form-field">
+          <label for="email" class="form-label">Email</label>
+          <input name="email" id="email" type="email" class="form-control" autocomplete="email" required />
+          <div class="invalid-feedback">Enter a valid email address.</div>
+        </div>
+        <div class="form-field">
+          <label for="password" class="form-label">Password</label>
+          <input name="password" id="password" type="password" class="form-control" autocomplete="new-password" minlength="6" required />
+          <div class="invalid-feedback">Use at least 6 characters.</div>
+        </div>
+        <button class="btn btn-primary auth-submit" type="submit">Create account</button>
+      </form>
+      <p class="auth-switch">Already have an account? <a href="/login">Log in</a></p>
+    </div>
+  </section>
 </div>

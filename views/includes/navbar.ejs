@@ -1,27 +1,37 @@
-<link rel="stylesheet" href="/css/style.css">
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+<nav class="navbar navbar-expand-lg sticky-top site-navbar" aria-label="Primary navigation">
+  <div class="page-shell navbar-shell">
+    <a class="navbar-brand brand-lockup" href="/" aria-label="WanderStay home">
+      <span class="brand-mark" aria-hidden="true">
+        <i class="fa-regular fa-compass"></i>
+      </span>
+      <span>WanderStay</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavigation"
+      aria-controls="primaryNavigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link" href="/listings">Explore</a>
+    <div class="collapse navbar-collapse" id="primaryNavigation">
+      <div class="navbar-nav nav-primary">
+        <a class="nav-link" data-nav-path="/listings" href="/listings">Explore</a>
       </div>
-      <div class="navbar-nav ms-auto">
-        <form class="d-flex" role="search" action="/listings" method="GET">
-          <input class="me-2 form-control search-inp" type="search" name="q" placeholder="Search destinations" />
-          <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
-        </form>
-      </div>
-      <div class="navbar-nav ms-auto">
+      <form class="nav-search" role="search" action="/listings" method="GET">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <label class="visually-hidden" for="site-search">Search stays</label>
+        <input id="site-search" class="form-control search-inp" type="search" name="q"
+          value="<%= typeof searchQuery !== 'undefined' ? searchQuery : '' %>" placeholder="Search destinations" />
+        <button class="search-btn" type="submit">Search</button>
+      </form>
+      <div class="navbar-nav nav-actions">
         <a class="nav-link" href="/listings/new">Become a host</a>
         <% if (!currUser) { %>
-          <a href="/signup" class="nav-link"><b>Sign Up</b></a>
-          <a href="/login" class="nav-link"><b>Login</b></a>
+          <a class="nav-link" data-nav-path="/login" href="/login">Log in</a>
+          <a class="btn btn-primary nav-signup" data-nav-path="/signup" href="/signup">Sign up</a>
           <% } else { %>
-            <a href="/logout" class="nav-link">Logout</a>
+            <span class="nav-user" aria-label="Signed in user">
+              <i class="fa-regular fa-circle-user" aria-hidden="true"></i>
+              <%= currUser.username %>
+            </span>
+            <a class="nav-link" href="/logout">Log out</a>
             <% } %>
       </div>
     </div>
