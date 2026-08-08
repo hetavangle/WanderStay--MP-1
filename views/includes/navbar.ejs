@@ -6,6 +6,13 @@
       </span>
       <span>WanderStay</span>
     </a>
+    <form class="nav-search" role="search" action="/listings" method="GET">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <label class="visually-hidden" for="site-search">Search stays</label>
+      <input id="site-search" class="form-control search-inp" type="search" name="q"
+        value="<%= typeof searchQuery !== 'undefined' ? searchQuery : '' %>" placeholder="Search destinations" />
+      <button class="search-btn" type="submit">Search</button>
+    </form>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavigation"
       aria-controls="primaryNavigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -14,13 +21,6 @@
       <div class="navbar-nav nav-primary">
         <a class="nav-link" data-nav-path="/listings" href="/listings">Explore</a>
       </div>
-      <form class="nav-search" role="search" action="/listings" method="GET">
-        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-        <label class="visually-hidden" for="site-search">Search stays</label>
-        <input id="site-search" class="form-control search-inp" type="search" name="q"
-          value="<%= typeof searchQuery !== 'undefined' ? searchQuery : '' %>" placeholder="Search destinations" />
-        <button class="search-btn" type="submit">Search</button>
-      </form>
       <div class="navbar-nav nav-actions">
         <a class="nav-link" href="/listings/new">Become a host</a>
         <% if (!currUser) { %>

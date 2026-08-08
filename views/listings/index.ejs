@@ -1,91 +1,95 @@
 <% layout("/layouts/boilerplate") %>
 
-<div class="page-shell listings-page">
-  <section class="browse-tools" aria-label="Browse by category">
-    <div id="filters" class="category-rail">
-      <a
-        href="/listings"
-        class="filter <%= !selectedCategory ? 'is-active' : '' %>"
-        <%= !selectedCategory ? 'aria-current="page"' : '' %>
-      >
-        <i class="fa-regular fa-compass" aria-hidden="true"></i>
-        <span>All stays</span>
-      </a>
-      <% for (const category of listingCategories) { %>
-        <a
-          href="/listings?category=<%= encodeURIComponent(category.value) %>"
-          class="filter <%= selectedCategory === category.value ? 'is-active' : '' %>"
-          <%= selectedCategory === category.value ? 'aria-current="page"' : '' %>
-        >
-          <i class="<%= category.icon %>" aria-hidden="true"></i>
-          <span><%= category.value %></span>
+  <div class="page-shell listings-page">
+    <section class="browse-tools" aria-label="Browse by category">
+      <div id="filters" class="category-rail">
+        <a href="/listings" class="filter <%= !selectedCategory ? 'is-active' : '' %>" <%=!selectedCategory
+          ? 'aria-current="page"' : '' %>
+          >
+          <i class="fa-regular fa-compass" aria-hidden="true"></i>
+          <span>All stays</span>
         </a>
-      <% } %>
-    </div>
-    <div class="tax-toggle">
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="tax-switch" />
-        <label class="form-check-label" for="tax-switch">Show GST</label>
+        <% for (const category of listingCategories) { %>
+          <a href="/listings?category=<%= encodeURIComponent(category.value) %>"
+            class="filter <%= selectedCategory === category.value ? 'is-active' : '' %>"
+            <%=selectedCategory===category.value ? 'aria-current="page"' : '' %>
+            >
+            <i class="<%= category.icon %>" aria-hidden="true"></i>
+            <span>
+              <%= category.value %>
+            </span>
+          </a>
+          <% } %>
       </div>
-    </div>
-  </section>
-
-  <section id="stays" class="stays-section" aria-labelledby="stays-title">
-    <div class="section-heading">
-      <div>
-        <% if (searchQuery) { %>
-          <p class="section-kicker">Search results</p>
-          <h2 id="stays-title">Stays matching “<%= searchQuery %>”</h2>
-        <% } else if (selectedCategory) { %>
-          <p class="section-kicker">Browse collection</p>
-          <h2 id="stays-title"><%= selectedCategory %> stays</h2>
-        <% } else { %>
-          <p class="section-kicker">Explore WanderStay</p>
-          <h2 id="stays-title">Places with a point of view</h2>
-        <% } %>
+      <div class="tax-toggle">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="tax-switch" />
+          <label class="form-check-label" for="tax-switch">Display total after taxes</label>
+        </div>
       </div>
-      <p><%= allListings.length %> <%= allListings.length === 1 ? "stay" : "stays" %> available</p>
-    </div>
+    </section>
 
-    <% if (allListings.length > 0) { %>
-      <div class="listing-grid">
-        <% for (const listing of allListings) { %>
-          <article class="listing-tile">
-            <a href="/listings/<%= listing._id %>" aria-label="View <%= listing.title %>">
-              <div class="card-img-wrapper">
-                <img
-                  src="<%= listing.image.url %>"
-                  class="card-img-top"
-                  alt="<%= listing.title %> in <%= listing.location %>"
-                  loading="lazy"
-                />
-              </div>
-              <div class="listing-card-body">
-                <div class="listing-card-heading">
-                  <h3><%= listing.title %></h3>
-                  <span aria-label="Guest favourite"><i class="fa-solid fa-star" aria-hidden="true"></i> New</span>
+    <section id="stays" class="stays-section" aria-labelledby="stays-title">
+      <div class="section-heading">
+        <div>
+          <% if (searchQuery) { %>
+            <p class="section-kicker">Search results</p>
+            <h2 id="stays-title">Stays matching “<%= searchQuery %>”</h2>
+            <% } else if (selectedCategory) { %>
+              <p class="section-kicker">Browse collection</p>
+              <h2 id="stays-title">
+                <%= selectedCategory %> stays
+              </h2>
+              <% } else { %>
+                <p class="section-kicker">Explore WanderStay</p>
+                <h2 id="stays-title">Places with a point of view</h2>
+                <% } %>
+        </div>
+        <p>
+          <%= allListings.length %>
+            <%= allListings.length===1 ? "stay" : "stays" %> available
+        </p>
+      </div>
+
+      <% if (allListings.length> 0) { %>
+        <div class="listing-grid">
+          <% for (const listing of allListings) { %>
+            <article class="listing-tile">
+              <a href="/listings/<%= listing._id %>" aria-label="View <%= listing.title %>">
+                <div class="card-img-wrapper">
+                  <img src="<%= listing.image.url %>" class="card-img-top"
+                    alt="<%= listing.title %> in <%= listing.location %>" loading="lazy" />
                 </div>
-                <p class="listing-location"><%= listing.location %>, <%= listing.country %></p>
-                <p class="listing-price">
-                  <% if (listing.price) { %>
-                    <strong>&#8377;<%= listing.price.toLocaleString("en-IN") %></strong> night
-                    <span class="tax-info">+ 18% GST</span>
-                  <% } else { %>
-                    <span>Price available on request</span>
-                  <% } %>
-                </p>
-              </div>
-            </a>
-          </article>
-        <% } %>
-      </div>
-    <% } else { %>
-      <div class="empty-state">
-        <span class="empty-state-icon" aria-hidden="true"><i class="fa-regular fa-map"></i></span>
-        <h3>No stays found</h3>
-        <p>Try a different destination or browse every available home.</p>
-        <a class="btn btn-primary" href="/listings">View all stays</a>
-      </div>
-    <% } %>
-  </section>
-</div>
+                <div class="listing-card-body">
+                  <div class="listing-card-heading">
+                    <h3>
+                      <%= listing.title %>
+                    </h3>
+                    <span aria-label="Guest favourite"><i class="fa-solid fa-star" aria-hidden="true"></i> New</span>
+                  </div>
+                  <p class="listing-location">
+                    <%= listing.location %>, <%= listing.country %>
+                  </p>
+                  <p class="listing-price">
+                    <% if (listing.price) { %>
+                      <strong>&#8377;<%= listing.price.toLocaleString("en-IN") %></strong> night
+                      <span class="tax-info">+ 18% GST</span>
+                      <% } else { %>
+                        <span>Price available on request</span>
+                        <% } %>
+                  </p>
+                </div>
+              </a>
+            </article>
+            <% } %>
+        </div>
+        <% } else { %>
+          <div class="empty-state">
+            <span class="empty-state-icon" aria-hidden="true"><i class="fa-regular fa-map"></i></span>
+            <h3>No stays found</h3>
+            <p>Try a different destination or browse every available home.</p>
+            <a class="btn btn-primary" href="/listings">View all stays</a>
+          </div>
+          <% } %>
+    </section>
+  </div>

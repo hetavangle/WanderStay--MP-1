@@ -264,11 +264,13 @@ p {
 }
 
 .nav-primary {
+  order: 1;
   flex: 0 0 auto;
   margin-right: 0.65rem;
 }
 
 .nav-search {
+  order: 2;
   width: min(100%, 35rem);
   min-height: 3rem;
   display: flex;
@@ -323,6 +325,7 @@ p {
 }
 
 .nav-actions {
+  order: 3;
   align-items: center;
   gap: 0.15rem;
   white-space: nowrap;
@@ -361,6 +364,7 @@ p {
 }
 
 .navbar-toggler {
+  order: 2;
   padding: 0.45rem 0.55rem;
   border-color: var(--line);
   border-radius: var(--radius-control);
@@ -851,13 +855,22 @@ p {
 }
 
 .owner-actions {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.65rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
 }
 
 .owner-actions form {
   margin: 0;
+}
+
+.owner-actions .btn,
+.owner-actions form,
+.owner-actions form .btn {
+  width: 100%;
 }
 
 .listing-hero-image {
@@ -1158,15 +1171,10 @@ p {
 }
 
 .review-delete {
+  min-height: 2.25rem;
   margin-top: 0.9rem;
-  padding: 0;
-  color: var(--danger);
-  background: transparent;
-  border: 0;
-  font-size: 0.76rem;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 0.2rem;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.74rem;
 }
 
 .reviews-empty {
@@ -1636,12 +1644,24 @@ textarea.form-control {
 
 }
 
+@media (min-width: 992px) {
+  .site-navbar.navbar-expand-lg .navbar-collapse {
+    display: contents !important;
+  }
+}
+
 @media (max-width: 991.98px) {
   .page-shell {
     width: min(calc(100% - 2rem), var(--container));
   }
 
+  .navbar-shell {
+    flex-wrap: wrap;
+  }
+
   .navbar-collapse {
+    order: 3;
+    flex-basis: 100%;
     margin-top: 0.75rem;
     padding: 1rem;
     background: var(--surface);
@@ -1655,8 +1675,9 @@ textarea.form-control {
   }
 
   .nav-search {
-    width: 100%;
-    margin: 0 0 0.75rem;
+    width: auto;
+    flex: 1 1 15rem;
+    margin: 0 0.75rem 0 0;
   }
 
   .nav-actions {
@@ -1780,10 +1801,6 @@ textarea.form-control {
     font-size: clamp(2.5rem, 12vw, 4rem);
   }
 
-  .owner-actions {
-    margin-top: 1.25rem;
-  }
-
   .listing-hero-image {
     height: 24rem;
     border-radius: var(--radius-card);
@@ -1856,6 +1873,22 @@ textarea.form-control {
 }
 
 @media (max-width: 575.98px) {
+  .brand-lockup {
+    margin-right: 0;
+  }
+
+  .navbar-toggler {
+    order: 1;
+    margin-left: auto;
+  }
+
+  .nav-search {
+    order: 2;
+    width: 100%;
+    flex-basis: 100%;
+    margin: 0.65rem 0 0;
+  }
+
   .hero-actions {
     width: 100%;
     align-items: flex-start;
@@ -1875,16 +1908,12 @@ textarea.form-control {
     height: 19rem;
   }
 
-  .owner-actions,
   .form-actions,
   .review-signin-prompt {
     align-items: stretch;
     flex-direction: column;
   }
 
-  .owner-actions .btn,
-  .owner-actions form,
-  .owner-actions form .btn,
   .form-actions .btn {
     width: 100%;
   }

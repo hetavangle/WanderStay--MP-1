@@ -1,145 +1,182 @@
 <% layout("/layouts/boilerplate") %>
 
-<div class="page-shell listing-detail-page">
-  <a class="back-link" href="/listings"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to stays</a>
+  <div class="page-shell listing-detail-page">
+    <a class="back-link" href="/listings"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to stays</a>
 
-  <header class="listing-detail-header">
-    <div>
-      <p class="section-kicker"><%= listing.category || "Featured stay" %></p>
-      <h1><%= listing.title %></h1>
-      <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <%= listing.location %>, <%= listing.country %></p>
-    </div>
-    <% if (currUser && listing.owner._id.equals(currUser._id)) { %>
-      <div class="owner-actions">
-        <a href="/listings/<%= listing._id %>/edit" class="btn btn-secondary"><i class="fa-regular fa-pen-to-square" aria-hidden="true"></i> Edit</a>
-        <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE" data-confirm="Delete this listing permanently?">
-          <button class="btn btn-danger" type="submit"><i class="fa-regular fa-trash-can" aria-hidden="true"></i> Delete</button>
-        </form>
+    <header class="listing-detail-header">
+      <div>
+        <p class="section-kicker">
+          <%= listing.category || "Featured stay" %>
+        </p>
+        <h1>
+          <%= listing.title %>
+        </h1>
+        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <%= listing.location %>, <%= listing.country %>
+        </p>
       </div>
-    <% } %>
-  </header>
+    </header>
 
-  <div class="listing-hero-image">
-    <img src="<%= listing.image.url %>" alt="<%= listing.title %> in <%= listing.location %>" />
-  </div>
+    <div class="listing-hero-image">
+      <img src="<%= listing.image.url %>" alt="<%= listing.title %> in <%= listing.location %>" />
+    </div>
 
-  <div class="listing-detail-layout">
-    <div class="listing-main-column">
-      <section class="listing-intro" aria-labelledby="about-stay">
-        <div class="host-line">
-          <span class="host-avatar" aria-hidden="true"><i class="fa-regular fa-user"></i></span>
-          <div>
-            <p>Hosted by</p>
-            <strong><%= listing.owner.username %></strong>
-          </div>
-        </div>
-        <h2 id="about-stay">About this stay</h2>
-        <p class="listing-description"><%= listing.description %></p>
-        <div class="stay-highlights" aria-label="Stay highlights">
-          <div><i class="fa-regular fa-circle-check" aria-hidden="true"></i><span><strong>Thoughtfully hosted</strong><small>Local care from arrival to checkout</small></span></div>
-          <div><i class="fa-regular fa-gem" aria-hidden="true"></i><span><strong>Distinctive setting</strong><small>A stay with a strong sense of place</small></span></div>
-        </div>
-      </section>
-
-      <section class="reviews-section" aria-labelledby="reviews-title">
-        <div class="reviews-heading">
-          <div>
-            <p class="section-kicker">Guest notes</p>
-            <h2 id="reviews-title">Reviews</h2>
-          </div>
-          <% if (listing.reviews.length > 0) { %>
-            <span><%= listing.reviews.length %> <%= listing.reviews.length === 1 ? "review" : "reviews" %></span>
-          <% } %>
-        </div>
-
-        <% if (currUser) { %>
-          <form action="/listings/<%= listing._id %>/reviews" method="POST" novalidate class="needs-validation review-form">
-            <h3>Share your experience</h3>
-            <div class="rating-field">
-              <span class="form-label">Rating</span>
-              <fieldset class="starability-grow">
-                <legend class="visually-hidden">Choose a rating from one to five stars</legend>
-                <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked aria-label="No rating" />
-                <input type="radio" id="first-rate1" name="review[rating]" value="1" />
-                <label for="first-rate1" title="Terrible">1 star</label>
-                <input type="radio" id="first-rate2" name="review[rating]" value="2" />
-                <label for="first-rate2" title="Not good">2 stars</label>
-                <input type="radio" id="first-rate3" name="review[rating]" value="3" />
-                <label for="first-rate3" title="Average">3 stars</label>
-                <input type="radio" id="first-rate4" name="review[rating]" value="4" />
-                <label for="first-rate4" title="Very good">4 stars</label>
-                <input type="radio" id="first-rate5" name="review[rating]" value="5" />
-                <label for="first-rate5" title="Amazing">5 stars</label>
-              </fieldset>
+    <div class="listing-detail-layout">
+      <div class="listing-main-column">
+        <section class="listing-intro" aria-labelledby="about-stay">
+          <div class="host-line">
+            <span class="host-avatar" aria-hidden="true"><i class="fa-regular fa-user"></i></span>
+            <div>
+              <p>Hosted by</p>
+              <strong>
+                <%= listing.owner.username %>
+              </strong>
             </div>
-            <div class="form-field">
-              <label for="comment" class="form-label">Your review</label>
-              <textarea name="review[comment]" id="comment" rows="4" class="form-control" placeholder="What made this stay memorable?" required></textarea>
-              <div class="invalid-feedback">Please add a review before submitting.</div>
-            </div>
-            <button class="btn btn-primary" type="submit">Submit review</button>
-          </form>
-        <% } else { %>
-          <div class="review-signin-prompt">
-            <p>Stayed here before? Sign in to share your experience.</p>
-            <a href="/login" class="text-link">Log in to review</a>
           </div>
-        <% } %>
+          <h2 id="about-stay">About this stay</h2>
+          <p class="listing-description">
+            <%= listing.description %>
+          </p>
+          <div class="stay-highlights" aria-label="Stay highlights">
+            <div><i class="fa-regular fa-circle-check" aria-hidden="true"></i><span><strong>Thoughtfully
+                  hosted</strong><small>Local care from arrival to checkout</small></span></div>
+            <div><i class="fa-regular fa-gem" aria-hidden="true"></i><span><strong>Distinctive setting</strong><small>A
+                  stay with a strong sense of place</small></span></div>
+          </div>
+        </section>
 
-        <% if (listing.reviews.length > 0) { %>
-          <div class="review-grid">
-            <% for (const review of listing.reviews) { %>
-              <article class="review-card">
-                <div class="review-card-head">
-                  <span class="review-avatar" aria-hidden="true"><%= review.author && review.author.username ? review.author.username.charAt(0).toUpperCase() : "G" %></span>
-                  <div>
-                    <h3><%= review.author && review.author.username ? review.author.username : "WanderStay guest" %></h3>
-                    <p class="starability-result" data-rating="<%= review.rating %>"></p>
+        <section class="reviews-section" aria-labelledby="reviews-title">
+          <div class="reviews-heading">
+            <div>
+              <p class="section-kicker">Guest notes</p>
+              <h2 id="reviews-title">Reviews</h2>
+            </div>
+            <% if (listing.reviews.length> 0) { %>
+              <span>
+                <%= listing.reviews.length %>
+                  <%= listing.reviews.length===1 ? "review" : "reviews" %>
+              </span>
+              <% } %>
+          </div>
+
+          <% if (currUser) { %>
+            <form action="/listings/<%= listing._id %>/reviews" method="POST" novalidate
+              class="needs-validation review-form">
+              <h3>Share your experience</h3>
+              <div class="rating-field">
+                <span class="form-label">Rating</span>
+                <fieldset class="starability-grow">
+                  <legend class="visually-hidden">Choose a rating from one to five stars</legend>
+                  <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked
+                    aria-label="No rating" />
+                  <input type="radio" id="first-rate1" name="review[rating]" value="1" />
+                  <label for="first-rate1" title="Terrible">1 star</label>
+                  <input type="radio" id="first-rate2" name="review[rating]" value="2" />
+                  <label for="first-rate2" title="Not good">2 stars</label>
+                  <input type="radio" id="first-rate3" name="review[rating]" value="3" />
+                  <label for="first-rate3" title="Average">3 stars</label>
+                  <input type="radio" id="first-rate4" name="review[rating]" value="4" />
+                  <label for="first-rate4" title="Very good">4 stars</label>
+                  <input type="radio" id="first-rate5" name="review[rating]" value="5" />
+                  <label for="first-rate5" title="Amazing">5 stars</label>
+                </fieldset>
+              </div>
+              <div class="form-field">
+                <label for="comment" class="form-label">Your review</label>
+                <textarea name="review[comment]" id="comment" rows="4" class="form-control"
+                  placeholder="What made this stay memorable?" required></textarea>
+                <div class="invalid-feedback">Please add a review before submitting.</div>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit review</button>
+            </form>
+            <% } else { %>
+              <div class="review-signin-prompt">
+                <p>Stayed here before? Sign in to share your experience.</p>
+                <a href="/login" class="text-link">Log in to review</a>
+              </div>
+              <% } %>
+
+                <% if (listing.reviews.length> 0) { %>
+                  <div class="review-grid">
+                    <% for (const review of listing.reviews) { %>
+                      <article class="review-card">
+                        <div class="review-card-head">
+                          <span class="review-avatar" aria-hidden="true">
+                            <%= review.author && review.author.username ? review.author.username.charAt(0).toUpperCase()
+                              : "G" %>
+                          </span>
+                          <div>
+                            <h3>
+                              <%= review.author && review.author.username ? review.author.username : "WanderStay guest"
+                                %>
+                            </h3>
+                            <p class="starability-result" data-rating="<%= review.rating %>"></p>
+                          </div>
+                        </div>
+                        <p>
+                          <%= review.comment %>
+                        </p>
+                        <% if (currUser && review.author && review.author._id.equals(currUser._id)) { %>
+                          <form method="POST"
+                            action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
+                            data-confirm="Delete this review?">
+                            <button class="btn btn-danger review-delete" type="submit">
+                              <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+                              Delete review
+                            </button>
+                          </form>
+                          <% } %>
+                      </article>
+                      <% } %>
                   </div>
-                </div>
-                <p><%= review.comment %></p>
-                <% if (currUser && review.author && review.author._id.equals(currUser._id)) { %>
-                  <form method="POST" action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE" data-confirm="Delete this review?">
-                    <button class="review-delete" type="submit">Delete review</button>
-                  </form>
-                <% } %>
-              </article>
-            <% } %>
-          </div>
-        <% } else { %>
-          <div class="reviews-empty">
-            <i class="fa-regular fa-message" aria-hidden="true"></i>
-            <p>No reviews yet. Be the first guest to share a note.</p>
+                  <% } else { %>
+                    <div class="reviews-empty">
+                      <i class="fa-regular fa-message" aria-hidden="true"></i>
+                      <p>No reviews yet. Be the first guest to share a note.</p>
+                    </div>
+                    <% } %>
+        </section>
+
+        <section class="listing-map-section" aria-labelledby="map-title">
+          <p class="section-kicker">The neighbourhood</p>
+          <h2 id="map-title">Where you’ll be</h2>
+          <p class="listing-map-location">
+            <%= listing.location %>, <%= listing.country %>
+          </p>
+          <div id="map" class="listing-static-map" data-map-token="<%= mapToken %>"
+            data-map-coordinates="<%= mapCoordinates.join(',') %>" data-map-title="<%= listing.title %>"
+            data-map-location="<%= listing.location %>, <%= listing.country %>" role="img"
+            aria-label="Map showing <%= listing.location %>, <%= listing.country %>"></div>
+        </section>
+      </div>
+
+      <aside class="stay-summary" aria-label="Stay price and details">
+        <div class="stay-summary-price">
+          <strong>&#8377;<%= listing.price.toLocaleString("en-IN") %></strong>
+          <span>night</span>
+        </div>
+        <div class="summary-row"><span>Location</span><strong>
+            <%= listing.location %>
+          </strong></div>
+        <div class="summary-row"><span>Country</span><strong>
+            <%= listing.country %>
+          </strong></div>
+        <div class="summary-row"><span>Category</span><strong>
+            <%= listing.category || "Featured" %>
+          </strong></div>
+        <p class="summary-note"><i class="fa-regular fa-circle-check" aria-hidden="true"></i> No booking fee is charged
+          while you explore.</p>
+        <% if (currUser && listing.owner._id.equals(currUser._id)) { %>
+          <div class="owner-actions" aria-label="Manage listing">
+            <a href="/listings/<%= listing._id %>/edit" class="btn btn-secondary"><i
+                class="fa-regular fa-pen-to-square" aria-hidden="true"></i> Edit</a>
+            <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE"
+              data-confirm="Delete this listing permanently?">
+              <button class="btn btn-danger" type="submit"><i class="fa-regular fa-trash-can"
+                  aria-hidden="true"></i> Delete</button>
+            </form>
           </div>
         <% } %>
-      </section>
-
-      <section class="listing-map-section" aria-labelledby="map-title">
-        <p class="section-kicker">The neighbourhood</p>
-        <h2 id="map-title">Where you’ll be</h2>
-        <p class="listing-map-location"><%= listing.location %>, <%= listing.country %></p>
-        <div
-          id="map"
-          class="listing-static-map"
-          data-map-token="<%= mapToken %>"
-          data-map-coordinates="<%= mapCoordinates.join(',') %>"
-          data-map-title="<%= listing.title %>"
-          data-map-location="<%= listing.location %>, <%= listing.country %>"
-          role="img"
-          aria-label="Map showing <%= listing.location %>, <%= listing.country %>"
-        ></div>
-      </section>
+      </aside>
     </div>
-
-    <aside class="stay-summary" aria-label="Stay price and details">
-      <div class="stay-summary-price">
-        <strong>&#8377;<%= listing.price.toLocaleString("en-IN") %></strong>
-        <span>night</span>
-      </div>
-      <div class="summary-row"><span>Location</span><strong><%= listing.location %></strong></div>
-      <div class="summary-row"><span>Country</span><strong><%= listing.country %></strong></div>
-      <div class="summary-row"><span>Category</span><strong><%= listing.category || "Featured" %></strong></div>
-      <p class="summary-note"><i class="fa-regular fa-circle-check" aria-hidden="true"></i> No booking fee is charged while you explore.</p>
-    </aside>
   </div>
-</div>
