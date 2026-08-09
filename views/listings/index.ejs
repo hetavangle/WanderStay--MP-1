@@ -6,7 +6,7 @@
         <a href="/listings" class="filter <%= !selectedCategory ? 'is-active' : '' %>" <%=!selectedCategory
           ? 'aria-current="page"' : '' %>
           >
-          <i class="fa-regular fa-compass" aria-hidden="true"></i>
+          <i class="ph ph-compass" aria-hidden="true"></i>
           <span>All stays</span>
         </a>
         <% for (const category of listingCategories) { %>
@@ -65,7 +65,7 @@
                     <h3>
                       <%= listing.title %>
                     </h3>
-                    <span aria-label="Guest favourite"><i class="fa-solid fa-star" aria-hidden="true"></i> New</span>
+                    <span aria-label="Guest favourite"><i class="ph ph-star" aria-hidden="true"></i> New</span>
                   </div>
                   <p class="listing-location">
                     <%= listing.location %>, <%= listing.country %>
@@ -85,7 +85,7 @@
         </div>
         <% } else { %>
           <div class="empty-state">
-            <span class="empty-state-icon" aria-hidden="true"><i class="fa-regular fa-map"></i></span>
+            <span class="empty-state-icon" aria-hidden="true"><i class="ph ph-map-trifold"></i></span>
             <h3>No stays found</h3>
             <p>Try a different destination or browse every available home.</p>
             <a class="btn btn-primary" href="/listings">View all stays</a>

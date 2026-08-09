@@ -99,7 +99,7 @@ if (mapElement) {
     markerElement.setAttribute("aria-label", `View ${mapTitle}`);
 
     const homeIcon = document.createElement("i");
-    homeIcon.className = "fa-solid fa-house";
+    homeIcon.className = "ph ph-house";
     homeIcon.setAttribute("aria-hidden", "true");
     markerElement.append(homeIcon);
 

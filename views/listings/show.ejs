@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate") %>
 
   <div class="page-shell listing-detail-page">
-    <a class="back-link" href="/listings"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to stays</a>
+    <a class="back-link" href="/listings"><i class="ph ph-arrow-left" aria-hidden="true"></i> Back to stays</a>
 
     <header class="listing-detail-header">
       <div>
@@ -11,7 +11,7 @@
         <h1>
           <%= listing.title %>
         </h1>
-        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        <p><i class="ph ph-map-pin" aria-hidden="true"></i>
           <%= listing.location %>, <%= listing.country %>
         </p>
       </div>
@@ -25,7 +25,7 @@
       <div class="listing-main-column">
         <section class="listing-intro" aria-labelledby="about-stay">
           <div class="host-line">
-            <span class="host-avatar" aria-hidden="true"><i class="fa-regular fa-user"></i></span>
+            <span class="host-avatar" aria-hidden="true"><i class="ph ph-user"></i></span>
             <div>
               <p>Hosted by</p>
               <strong>
@@ -38,9 +38,9 @@
             <%= listing.description %>
           </p>
           <div class="stay-highlights" aria-label="Stay highlights">
-            <div><i class="fa-regular fa-circle-check" aria-hidden="true"></i><span><strong>Thoughtfully
+            <div><i class="ph ph-check-circle" aria-hidden="true"></i><span><strong>Thoughtfully
                   hosted</strong><small>Local care from arrival to checkout</small></span></div>
-            <div><i class="fa-regular fa-gem" aria-hidden="true"></i><span><strong>Distinctive setting</strong><small>A
+            <div><i class="ph ph-diamond" aria-hidden="true"></i><span><strong>Distinctive setting</strong><small>A
                   stay with a strong sense of place</small></span></div>
           </div>
         </section>
@@ -48,7 +48,6 @@
         <section class="reviews-section" aria-labelledby="reviews-title">
           <div class="reviews-heading">
             <div>
-              <p class="section-kicker">Guest notes</p>
               <h2 id="reviews-title">Reviews</h2>
             </div>
             <% if (listing.reviews.length> 0) { %>
@@ -121,7 +120,7 @@
                             action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
                             data-confirm="Delete this review?">
                             <button class="btn btn-danger review-delete" type="submit">
-                              <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+                              <i class="ph ph-trash" aria-hidden="true"></i>
                               Delete review
                             </button>
                           </form>
@@ -131,14 +130,13 @@
                   </div>
                   <% } else { %>
                     <div class="reviews-empty">
-                      <i class="fa-regular fa-message" aria-hidden="true"></i>
+                      <i class="ph ph-chat-circle-text" aria-hidden="true"></i>
                       <p>No reviews yet. Be the first guest to share a note.</p>
                     </div>
                     <% } %>
         </section>
 
         <section class="listing-map-section" aria-labelledby="map-title">
-          <p class="section-kicker">The neighbourhood</p>
           <h2 id="map-title">Where you’ll be</h2>
           <p class="listing-map-location">
             <%= listing.location %>, <%= listing.country %>
@@ -164,15 +162,15 @@
         <div class="summary-row"><span>Category</span><strong>
             <%= listing.category || "Featured" %>
           </strong></div>
-        <p class="summary-note"><i class="fa-regular fa-circle-check" aria-hidden="true"></i> No booking fee is charged
+        <p class="summary-note"><i class="ph ph-check-circle" aria-hidden="true"></i> No booking fee is charged
           while you explore.</p>
         <% if (currUser && listing.owner._id.equals(currUser._id)) { %>
           <div class="owner-actions" aria-label="Manage listing">
             <a href="/listings/<%= listing._id %>/edit" class="btn btn-secondary"><i
-                class="fa-regular fa-pen-to-square" aria-hidden="true"></i> Edit</a>
+                class="ph ph-pencil-simple" aria-hidden="true"></i> Edit</a>
             <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE"
               data-confirm="Delete this listing permanently?">
-              <button class="btn btn-danger" type="submit"><i class="fa-regular fa-trash-can"
+              <button class="btn btn-danger" type="submit"><i class="ph ph-trash"
                   aria-hidden="true"></i> Delete</button>
             </form>
           </div>

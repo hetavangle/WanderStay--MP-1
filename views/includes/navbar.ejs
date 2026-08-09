@@ -2,12 +2,12 @@
   <div class="page-shell navbar-shell">
     <a class="navbar-brand brand-lockup" href="/" aria-label="WanderStay home">
       <span class="brand-mark" aria-hidden="true">
-        <i class="fa-regular fa-compass"></i>
+        <i class="ph ph-compass"></i>
       </span>
       <span>WanderStay</span>
     </a>
     <form class="nav-search" role="search" action="/listings" method="GET">
-      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
       <label class="visually-hidden" for="site-search">Search stays</label>
       <input id="site-search" class="form-control search-inp" type="search" name="q"
         value="<%= typeof searchQuery !== 'undefined' ? searchQuery : '' %>" placeholder="Search destinations" />
@@ -28,7 +28,7 @@
           <a class="btn btn-primary nav-signup" data-nav-path="/signup" href="/signup">Sign up</a>
           <% } else { %>
             <span class="nav-user" aria-label="Signed in user">
-              <i class="fa-regular fa-circle-user" aria-hidden="true"></i>
+              <i class="ph ph-user-circle" aria-hidden="true"></i>
               <%= currUser.username %>
             </span>
             <a class="nav-link" href="/logout">Log out</a>
